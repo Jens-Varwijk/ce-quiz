@@ -1,0 +1,1250 @@
+[
+ {
+  "ronde": 1,
+  "type": "mc",
+  "categorie": "Circulariteit · R-ladder",
+  "vraag": "Een smartphonemerk ontwerpt modulaire telefoons waarbij gebruikers zelf een kapotte camera kunnen vervangen. Welke R-strategie staat centraal?",
+  "opties": [
+   "Repair",
+   "Reuse",
+   "Recycle",
+   "Reduce"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Het product wordt hersteld zodat het zijn oorspronkelijke functie behoudt bij dezelfde gebruiker.",
+   "concept": "R-ladder: Repair (R4) — levensduurverlenging op productniveau.",
+   "afleider": "Reuse is hergebruik van het héle product door een nieuwe gebruiker; Recycle werkt pas op materiaalniveau en verliest de productwaarde.",
+   "systeem": "Modulair ontwerp is een ontwerpkeuze die repareren goedkoop maakt — ontwerp stuurt gedrag."
+  }
+ },
+ {
+  "ronde": 1,
+  "type": "mc",
+  "categorie": "Rapportage · Materialiteit",
+  "vraag": "Een bedrijf rapporteert hoeveel biodiversiteit het in zijn keten aantast én hoe droogte de eigen grondstoffenaanvoer bedreigt. Welk principe past hier precies bij?",
+  "opties": [
+   "Dubbele materialiteit",
+   "Triple Bottom Line",
+   "Financiële materialiteit",
+   "Zes kapitalen (IIRC)"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Het combineert inside-out (impact van het bedrijf op de wereld) en outside-in (impact van de wereld op het bedrijf).",
+   "concept": "Dubbele materialiteit, de kern van de CSRD.",
+   "afleider": "Financiële materialiteit kijkt alleen outside-in; TBL en de zes kapitalen beschrijven waardecreatie, niet deze tweezijdige toets.",
+   "systeem": "Bedrijf en omgeving beïnvloeden elkaar wederzijds: een feedbackrelatie."
+  }
+ },
+ {
+  "ronde": 1,
+  "type": "mc",
+  "categorie": "Circulaire businessmodellen",
+  "vraag": "Een wasmachinefabrikant verkoopt geen machines meer, maar laat klanten per wasbeurt betalen. De fabrikant blijft eigenaar en doet het onderhoud. Welk model is dit?",
+  "opties": [
+   "Product-as-a-Service",
+   "Deelplatform",
+   "Refurbish-model",
+   "Recover-model"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "De klant koopt de functie (schone was), niet het product; het eigendom blijft bij de producent.",
+   "concept": "Product-as-a-Service (PaaS): de prikkel verschuift naar duurzame, repareerbare machines.",
+   "afleider": "Een deelplatform verbindt gebruikers onderling (peer-to-peer); refurbishen is opknappen voor doorverkoop.",
+   "systeem": "Eigendom bepaalt prikkels: wie eigenaar blijft, heeft baat bij een lange levensduur."
+  }
+ },
+ {
+  "ronde": 1,
+  "type": "mc",
+  "categorie": "Klimaat · Feedback",
+  "vraag": "Ontdooiende permafrost laat methaan vrij. Dat versterkt de opwarming, waardoor nog meer permafrost ontdooit. Wat voor mechanisme is dit?",
+  "opties": [
+   "Versterkende (positieve) feedbackloop",
+   "Balancerende (negatieve) feedbackloop",
+   "Koolstofbudget",
+   "Lineaire oorzaak-gevolgketen"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Het effect versterkt zijn eigen oorzaak: opwarming → methaan → meer opwarming.",
+   "concept": "R-loop / positieve feedback; kan leiden tot een tipping point.",
+   "afleider": "Een balancerende loop dempt verandering juist richting een evenwicht; een lineaire keten heeft geen terugkoppeling.",
+   "systeem": "‘Positief’ betekent hier versterkend, niet ‘gunstig’."
+  }
+ },
+ {
+  "ronde": 1,
+  "type": "mc",
+  "categorie": "Energie",
+  "vraag": "Een ondernemer wil een groot zonnedak aansluiten, maar de netbeheerder weigert omdat het elektriciteitsnet op piekmomenten vol zit. Hoe heet dit probleem?",
+  "opties": [
+   "Netcongestie",
+   "Lock-in",
+   "Rebound-effect",
+   "Tipping point"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Het net heeft onvoldoende transportcapaciteit om vraag en aanbod op piekmomenten te verwerken.",
+   "concept": "Netcongestie: een fysieke grens van infrastructuur in de energietransitie.",
+   "afleider": "Lock-in gaat over vastzitten aan bestaande keuzes; rebound over extra gebruik door efficiëntie.",
+   "systeem": "Infrastructuur groeit trager dan de vraag: een vertraging in het systeem."
+  }
+ },
+ {
+  "ronde": 1,
+  "type": "mc",
+  "categorie": "Morele ontkoppeling",
+  "vraag": "Een medewerker zegt: ‘Ik voer alleen uit wat het management besluit, dus de lozing is niet mijn verantwoordelijkheid.’ Welk mechanisme van Bandura is dit?",
+  "opties": [
+   "Verplaatsing van verantwoordelijkheid",
+   "Diffusie van verantwoordelijkheid",
+   "Eufemistisch taalgebruik",
+   "Gunstige vergelijking"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "De verantwoordelijkheid wordt naar een autoriteit (het management) geschoven.",
+   "concept": "Morele ontkoppeling (Bandura): displacement of responsibility.",
+   "afleider": "Diffusie lijkt erop, maar verspreidt de schuld over een groep (‘iedereen doet het’), niet naar een hogere autoriteit.",
+   "systeem": "Hiërarchische structuren maken deze ontkoppeling makkelijker."
+  }
+ },
+ {
+  "ronde": 1,
+  "type": "mc",
+  "categorie": "Greenwashing",
+  "vraag": "Een frisdrankmerk zet ‘100% recyclebaar’ groot op de fles, terwijl in de praktijk maar een klein deel echt gerecycled wordt. Waarom is dit problematisch?",
+  "opties": [
+   "De claim gaat over potentie en suggereert een circulaire uitkomst die niet wordt gehaald",
+   "Een claim is alleen misleidend als hij feitelijk onwaar is",
+   "Recycling staat hoog op de R-ladder, dus de claim is juist sterk",
+   "Het is een externaliteit, omdat de prijs van de fles de milieuschade van plastic niet weerspiegelt"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Een technisch juiste claim kan toch misleiden door wat hij suggereert: dat de fles circulair is.",
+   "concept": "Greenwashing via misleidende framing.",
+   "afleider": "‘Alleen onwaar is misleidend’ klopt niet: ook juiste maar misleidend gepresenteerde claims vallen onder EU-consumentenregels. Recycle staat juist láág op de R-ladder.",
+   "systeem": "Zulke framing kan systeemverandering vertragen, omdat consumenten zich gerustgesteld voelen."
+  }
+ },
+ {
+  "ronde": 1,
+  "type": "mc",
+  "categorie": "Duurzaamheid · Dimensies",
+  "vraag": "Een gemeente beoordeelt een nieuw bedrijventerrein alleen op banen en economische groei, niet op natuur en leefbaarheid. Welk raamwerk wordt hier genegeerd?",
+  "opties": [
+   "Triple Bottom Line (People, Planet, Profit)",
+   "Aandeelhoudersmodel",
+   "LCA",
+   "R-ladder"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Alleen ‘Profit’ wordt meegewogen; ‘People’ (leefbaarheid) en ‘Planet’ (natuur) ontbreken.",
+   "concept": "De drie dimensies van duurzaamheid / Triple Bottom Line (Elkington).",
+   "afleider": "LCA meet milieueffecten van een product, niet de bredere beleidsafweging; het aandeelhoudersmodel is juist de eenzijdige focus zelf.",
+   "systeem": "Wat je niet meet, telt niet mee in het besluit."
+  }
+ },
+ {
+  "ronde": 1,
+  "type": "mc",
+  "categorie": "Ontwerp",
+  "vraag": "Een architect ontwerpt een kantoor dat zonder airco koel blijft, met ventilatie naar het voorbeeld van termietenheuvels. Welke benadering is dit?",
+  "opties": [
+   "Biomimicry",
+   "Eco-efficiëntie",
+   "Recover",
+   "Product-as-a-Service"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "De natuur dient als model voor een technische oplossing (zoals het Eastgate Centre in Harare).",
+   "concept": "Biomimicry (Janine Benyus) en Life’s Principles.",
+   "afleider": "Eco-efficiëntie is ‘minder slecht’ (bijvoorbeeld een zuinigere airco), niet leren van natuurlijke systemen.",
+   "systeem": "De natuur heeft al miljoenen jaren ‘R&D’ gedaan in systemen die zichzelf in balans houden."
+  }
+ },
+ {
+  "ronde": 1,
+  "type": "mc",
+  "categorie": "Complexiteit",
+  "vraag": "Een stad blijft investeren in het gasnet ‘omdat het er nu eenmaal ligt’, waardoor de overstap naar warmtenetten steeds duurder wordt. Welk concept is dit?",
+  "opties": [
+   "Lock-in / padafhankelijkheid",
+   "Rebound-effect",
+   "Tragedy of the commons",
+   "Externaliteit"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Eerdere investeringen maken het steeds aantrekkelijker om op hetzelfde pad door te gaan.",
+   "concept": "Lock-in en padafhankelijkheid: verzonken kosten en bestaande infrastructuur sturen toekomstige keuzes.",
+   "afleider": "Een externaliteit gaat over kosten bij derden; rebound over extra gebruik door efficiëntie.",
+   "systeem": "Lock-in werkt als een versterkende loop: hoe meer je investeert, hoe moeilijker het wordt om te stoppen."
+  }
+ },
+ {
+  "ronde": 1,
+  "type": "mc",
+  "categorie": "Commons",
+  "vraag": "Vissers in een gedeelde zee vangen elk zoveel mogelijk, omdat ‘een ander het anders doet’. De visstand stort in. Welk concept beschrijft dit het best?",
+  "opties": [
+   "Tragedy of the commons",
+   "Kuddegedrag",
+   "Financialisering",
+   "Netcongestie"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Een gedeelde, uitputbare bron raakt uitgeput doordat ieder individueel rationeel handelt.",
+   "concept": "Commons (Hardin; nuancering door Ostrom).",
+   "afleider": "Kuddegedrag is anderen imiteren; hier gaat het om de structuur van een gedeelde bron zonder regels.",
+   "systeem": "Individuele rationaliteit kan leiden tot collectieve irrationaliteit."
+  }
+ },
+ {
+  "ronde": 1,
+  "type": "mc",
+  "categorie": "Planetaire grenzen",
+  "vraag": "Overmatig kunstmestgebruik leidt tot algenbloei en zuurstofloze zones in kustwateren. Welke planetaire grens van Rockström is het meest direct geraakt?",
+  "opties": [
+   "Biogeochemische stromen (stikstof & fosfor)",
+   "Verandering in landgebruik",
+   "Oceaanverzuring",
+   "Nieuwe entiteiten"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Het gaat om de verstoorde stikstof- en fosforkringloop, die al ver over de grens is.",
+   "concept": "9 planetaire grenzen (Rockström e.a.).",
+   "afleider": "Oceaanverzuring komt door CO₂-opname, niet door nutriënten; nieuwe entiteiten zijn synthetische stoffen zoals plastics en PFAS.",
+   "systeem": "De stikstofcrisis in Nederland is een lokaal gezicht van deze mondiale grens."
+  }
+ },
+ {
+  "ronde": 2,
+  "type": "mc",
+  "categorie": "Systeemdenken · Meadows",
+  "vraag": "Een overheid wil overconsumptie terugdringen. Welke interventie is volgens Donella Meadows het krachtigste hefboompunt?",
+  "opties": [
+   "Het paradigma veranderen dat welvaart gelijkstaat aan economische groei",
+   "De btw op vlees en vliegtickets flink verhogen, zodat prijzen de werkelijke milieukosten weerspiegelen",
+   "Verplichte milieulabels op alle producten",
+   "Strengere regels voor reclame"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Paradigma’s (de onderliggende overtuigingen) staan bijna bovenaan Meadows’ lijst van hefboompunten.",
+   "concept": "Hefboompunten (Meadows): parameters < informatiestromen < regels < doelen < paradigma’s.",
+   "afleider": "Btw is een parameter (zwak hefboompunt), labels zijn informatiestromen en reclameregels zijn regels: allemaal zinvol, maar minder diep.",
+   "systeem": "Hoe dieper het hefboompunt, hoe groter de verandering — en hoe groter de weerstand."
+  }
+ },
+ {
+  "ronde": 2,
+  "type": "mc",
+  "categorie": "Systeemdenken · IJsberg",
+  "vraag": "Ondanks steeds hogere dijken neemt de schade bij overstromingen toe. Analisten zien de overtuiging ‘we kunnen water altijd technisch beheersen’ als de diepste oorzaak. Op welk niveau van het ijsbergmodel ligt die?",
+  "opties": [
+   "Mentale modellen",
+   "Patronen",
+   "Systeemstructuren",
+   "Gebeurtenissen"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Overtuigingen en aannames die structuren in stand houden, zijn mentale modellen: de diepste laag.",
+   "concept": "IJsbergmodel / systeemdenken (Senge): gebeurtenissen → patronen → structuren → mentale modellen.",
+   "afleider": "Structuren zijn de beleidsregels en infrastructuur zelf; patronen zijn de terugkerende trends in de schade.",
+   "systeem": "Wie alleen op gebeurtenissen reageert, blijft symptomen bestrijden."
+  }
+ },
+ {
+  "ronde": 2,
+  "type": "mc",
+  "categorie": "LCA",
+  "vraag": "Een producent vervangt een materiaal door een alternatief dat 40% minder materiaal gebruikt, maar niet recyclebaar is. Hoe bepaal je het best of dit duurzamer is?",
+  "opties": [
+   "Met een LCA die beide opties over de volledige levenscyclus vergelijkt",
+   "Reduce staat hoger op de R-ladder dan Recycle, dus het alternatief is altijd beter",
+   "Door alleen de CO₂-uitstoot in de productiefase te vergelijken",
+   "Met een dubbele-materialiteitsanalyse van het bedrijf"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Alleen een levenscyclusanalyse weegt winning, productie, gebruik én afvalfase tegen elkaar af.",
+   "concept": "LCA (Life Cycle Assessment), van wieg tot graf.",
+   "afleider": "De R-ladder is een vuistregel, geen absolute wet: minder materiaal dat daarna verbrand wordt, kan slechter uitpakken. Alleen de productiefase meten verschuift problemen.",
+   "systeem": "Let op probleemverschuiving tussen fasen en tussen milieuthema’s."
+  }
+ },
+ {
+  "ronde": 2,
+  "type": "mc",
+  "categorie": "Waardecreatie · 6 kapitalen",
+  "vraag": "Een bedrijf investeert in opleiding van medewerkers en in vertrouwen bij omwonenden. Welke kapitalen uit het IIRC-raamwerk nemen vooral toe?",
+  "opties": [
+   "Menselijk en sociaal-relationeel kapitaal",
+   "Intellectueel en financieel kapitaal",
+   "Geproduceerd en natuurlijk kapitaal",
+   "Intellectueel en sociaal-relationeel kapitaal"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Kennis en vaardigheden van mensen zijn menselijk kapitaal; vertrouwen en relaties zijn sociaal-relationeel kapitaal.",
+   "concept": "Zes kapitalen (IIRC): financieel, geproduceerd, intellectueel, menselijk, sociaal-relationeel, natuurlijk.",
+   "afleider": "Intellectueel kapitaal is organisatiekennis zoals patenten en systemen, niet de vaardigheden van individuele medewerkers.",
+   "systeem": "Meervoudige waardecreatie maakt zichtbaar wat een winst-en-verliesrekening mist."
+  }
+ },
+ {
+  "ronde": 2,
+  "type": "mc",
+  "categorie": "Organisatie en macht",
+  "vraag": "Een CEO weigert te investeren in emissiereductie die verder gaat dan de wet, omdat dat ‘het geld van de aandeelhouders’ zou zijn. Welke visie hanteert hij?",
+  "opties": [
+   "Het aandeelhoudersmodel van Friedman",
+   "Het stakeholdermodel van Freeman",
+   "Morele economie",
+   "Triple Bottom Line"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Friedman: de enige maatschappelijke verantwoordelijkheid van een bedrijf is winst maken binnen de spelregels.",
+   "concept": "Shareholder primacy (Friedman, 1970).",
+   "afleider": "Het stakeholdermodel weegt juist de belangen van alle betrokkenen mee, zoals werknemers, omgeving en natuur.",
+   "systeem": "De wet wordt dan het plafond in plaats van de ondergrens van verantwoordelijkheid."
+  }
+ },
+ {
+  "ronde": 2,
+  "type": "mc",
+  "categorie": "Technologie en samenleving",
+  "vraag": "Robert Moses liet in New York viaducten zo laag bouwen dat bussen, en daarmee vooral armere bewoners, de stranden niet konden bereiken. Welk inzicht illustreert dit?",
+  "opties": [
+   "Artefacten hebben politiek: technologie is niet neutraal (Winner)",
+   "Dingen zijn net als mensen actoren die samen een netwerk vormen (Latour)",
+   "Padafhankelijkheid van infrastructuur",
+   "De structure-versus-agencydiscussie"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Dit is precies Langdon Winners voorbeeld in ‘Do Artifacts Have Politics?’: waarden en macht zitten ingebouwd in het ontwerp.",
+   "concept": "Technologie is niet neutraal — Langdon Winner.",
+   "afleider": "De ANT van Latour is verwant, maar gaat over dingen als handelende actoren in netwerken; Winner benadrukt de politieke bedoelingen en effecten van ontwerp.",
+   "systeem": "Ontwerpkeuzes leggen machtsverhoudingen voor decennia vast."
+  }
+ },
+ {
+  "ronde": 2,
+  "type": "mc",
+  "categorie": "Technologie en samenleving",
+  "vraag": "Een verkeersdrempel zorgt ervoor dat automobilisten afremmen, ook als er geen politie is. Hoe beschrijft Bruno Latour die drempel?",
+  "opties": [
+   "Als niet-menselijke actor die handelen mede vormgeeft in een netwerk",
+   "Als een balancerende feedbackloop die de snelheid automatisch terugbrengt naar de norm",
+   "Als bewijs dat technologie een neutraal middel is",
+   "Als een negatieve externaliteit"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "In de Actor-Network Theory zijn mensen én dingen ‘actanten’; de drempel neemt de taak van de agent over.",
+   "concept": "Actor-Network Theory (Latour), het voorbeeld van de ‘slapende politieagent’.",
+   "afleider": "Er is geen terugkoppeling op systeemniveau, dus het is geen feedbackloop. Neutraal is de drempel juist niet: hij dwingt gedrag af.",
+   "systeem": "Moraal kan worden ‘gedelegeerd’ aan techniek: een vorm van technologie als morele interventie."
+  }
+ },
+ {
+  "ronde": 2,
+  "type": "mc",
+  "categorie": "Business ethics · Economie",
+  "vraag": "Piketty laat zien dat het rendement op vermogen (r) lange tijd hoger ligt dan de economische groei (g). Wat is volgens hem het gevolg?",
+  "opties": [
+   "Vermogensongelijkheid neemt structureel toe",
+   "Lonen stijgen sneller dan vermogens",
+   "Ongelijkheid daalt vanzelf als de economie rijper wordt",
+   "Inflatie wist vermogensverschillen uit"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Bij r > g groeit bestaand vermogen sneller dan het inkomen uit arbeid: wie heeft, krijgt meer.",
+   "concept": "Piketty, Capital in the 21st Century: r > g.",
+   "afleider": "‘Ongelijkheid daalt vanzelf’ is de Kuznets-hypothese die Piketty juist bekritiseert.",
+   "systeem": "Dit is een versterkende loop van vermogensconcentratie, die ook politieke macht beïnvloedt."
+  }
+ },
+ {
+  "ronde": 2,
+  "type": "mc",
+  "categorie": "Organisatie en macht",
+  "vraag": "Een investeringsfonds koopt duizenden huurwoningen, verhoogt de huren en stelt onderhoud uit om het rendement voor beleggers te maximaliseren. Welk concept past het best?",
+  "opties": [
+   "Financialisering",
+   "Commons",
+   "Morele economie",
+   "Product-as-a-Service"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Een basisbehoefte (wonen) wordt in de eerste plaats een financieel product dat rendement moet opleveren.",
+   "concept": "Financialisering: de groeiende dominantie van financiële markten en motieven.",
+   "afleider": "Morele economie is juist het tegenovergestelde perspectief: economie ingebed in normen van rechtvaardigheid en wederkerigheid.",
+   "systeem": "Het systeemdoel verschuift van ‘mensen huisvesten’ naar ‘rendement maken’."
+  }
+ },
+ {
+  "ronde": 2,
+  "type": "mc",
+  "categorie": "Gedrag en verantwoordelijkheid",
+  "vraag": "Consumenten zeggen duurzaam te willen kopen, maar kiezen toch de goedkoopste optie. Een beleidsmaker vraagt zich af: ligt het aan het individu of aan het systeem? Welk debat is dit?",
+  "opties": [
+   "Structure versus agency",
+   "Morele ontkoppeling",
+   "Kuddegedrag",
+   "Rebound-effect"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Het gaat om de vraag of gedrag vooral voortkomt uit individuele keuzevrijheid (agency) of uit omringende structuren zoals prijzen en aanbod.",
+   "concept": "Structure vs. agency.",
+   "afleider": "Kuddegedrag verklaart navolging van anderen, niet de spanning tussen intentie en context.",
+   "systeem": "Beleid dat alleen ‘bewustwording’ stimuleert, onderschat vaak de structuur."
+  }
+ },
+ {
+  "ronde": 2,
+  "type": "mc",
+  "categorie": "Klimaat · Tipping points",
+  "vraag": "Bij verdere ontbossing kan het Amazonegebied omslaan naar savanne, zelfs als de ontbossing daarna stopt. Wat kenmerkt deze situatie het meest?",
+  "opties": [
+   "Een kantelpunt met (vrijwel) onomkeerbare gevolgen",
+   "Een lineair verband tussen ontbossing en schade",
+   "Een balancerende loop die het bos na verloop van tijd vanzelf herstelt",
+   "Een overschrijding van het koolstofbudget"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Voorbij het kantelpunt nemen versterkende loops het over en ontstaat een nieuwe, stabiele toestand.",
+   "concept": "Tipping points en hysterese: terugkeren is veel moeilijker dan omslaan.",
+   "afleider": "Het verband is juist níét lineair; geleidelijk verlies kan plots omslaan in een systeemverandering.",
+   "systeem": "Voorzorg is nodig, omdat je het kantelpunt vaak pas herkent als je eroverheen bent."
+  }
+ },
+ {
+  "ronde": 2,
+  "type": "mc",
+  "categorie": "Complexiteit",
+  "vraag": "In de stikstofcrisis zijn partijen het niet eens over wat het probleem is, roept elke oplossing nieuwe problemen op en bestaat er geen definitief eindpunt. Wat voor probleem is dit?",
+  "opties": [
+   "Een wicked problem",
+   "Een complicated maar tam probleem",
+   "Een tragedy of the commons",
+   "Een lock-in"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Dit zijn de kenmerken van wicked problems (Rittel & Webber): geen eenduidige definitie, geen stopregel, en elke ingreep telt.",
+   "concept": "Wicked problems.",
+   "afleider": "Een tam probleem kan complex zijn, maar heeft een duidelijke definitie en oplossing. Commons en lock-in kunnen onderdelen zijn, maar dekken het geheel niet.",
+   "systeem": "Werk met iteratie, dialoog en experimenten in plaats van één blauwdruk."
+  }
+ },
+ {
+  "ronde": 3,
+  "type": "volgorde",
+  "categorie": "R-ladder",
+  "vraag": "Zet deze R-strategieën van MEEST naar MINST circulair.",
+  "items": [
+   "Refuse",
+   "Reduce",
+   "Repair",
+   "Recycle"
+  ],
+  "uitleg": {
+   "goed": "Refuse (R0) voorkomt een product helemaal; Reduce (R2) gebruikt minder; Repair (R4) behoudt het product; Recycle (R8) behoudt alleen materiaal.",
+   "concept": "R-ladder: hoe hoger de trede, hoe meer waarde je behoudt.",
+   "afleider": "Recycle voelt duurzaam, maar staat laag op de ladder: de vorm en de functie van het product gaan verloren.",
+   "systeem": "Hoe hoger op de ladder, hoe meer het businessmodel moet veranderen."
+  }
+ },
+ {
+  "ronde": 3,
+  "type": "volgorde",
+  "categorie": "R-ladder · Casus",
+  "vraag": "Een kapotte bureaustoel. Zet de opties van MEEST naar MINST circulair.",
+  "items": [
+   "Een andere afdeling gebruikt een identieke, nog goede stoel (Reuse)",
+   "De wieltjes van de kapotte stoel worden vervangen (Repair)",
+   "Het staal van de stoel wordt omgesmolten (Recycle)",
+   "De stoel wordt verbrand met energieterugwinning (Recover)"
+  ],
+  "uitleg": {
+   "goed": "Reuse (R3) > Repair (R4) > Recycle (R8) > Recover (R9).",
+   "concept": "R-ladder toegepast op een casus.",
+   "afleider": "Recover lijkt nuttig door energieterugwinning, maar is de laatste trede: alle materiaalwaarde gaat verloren.",
+   "systeem": "Waarde behouden op productniveau bespaart winning, energie én uitstoot in de hele keten."
+  }
+ },
+ {
+  "ronde": 3,
+  "type": "volgorde",
+  "categorie": "Meadows · Hefboompunten",
+  "vraag": "Zet deze klimaatinterventies van ZWAKSTE naar STERKSTE hefboompunt volgens Meadows.",
+  "items": [
+   "De CO₂-heffing verhogen van €50 naar €60 per ton (parameter)",
+   "Bedrijven verplichten hun uitstoot realtime openbaar te maken (informatiestroom)",
+   "Een wettelijk verbod op nieuwe fossiele installaties (regels)",
+   "Brede welvaart in plaats van bbp-groei als doel van het beleid (systeemdoel)"
+  ],
+  "uitleg": {
+   "goed": "Parameters (12) < informatiestromen (6) < regels (5) < doelen (3).",
+   "concept": "Hefboompunten van Donella Meadows.",
+   "afleider": "Een hogere heffing voelt krachtig, maar verandert alleen een getal binnen het bestaande systeem.",
+   "systeem": "Het doel van een systeem bepaalt waar alle regels en parameters naartoe werken."
+  }
+ },
+ {
+  "ronde": 3,
+  "type": "volgorde",
+  "categorie": "Systeemdenken · IJsberg",
+  "vraag": "Zet de lagen van het ijsbergmodel van ZICHTBAAR (boven) naar DIEP (onder).",
+  "items": [
+   "Gebeurtenissen: ‘Deze week was er weer een hittegolf’",
+   "Patronen: ‘Hittegolven komen steeds vaker voor’",
+   "Structuren: ‘Fossiele infrastructuur en subsidies houden de uitstoot hoog’",
+   "Mentale modellen: ‘Groei en comfort gaan altijd voor’"
+  ],
+  "uitleg": {
+   "goed": "Van zichtbaar naar diep: gebeurtenissen → patronen → structuren → mentale modellen.",
+   "concept": "IJsbergmodel (systeemdenken, Senge).",
+   "afleider": "Structuren en mentale modellen worden vaak verwisseld: structuren zijn tastbaar (regels, infrastructuur), mentale modellen zijn overtuigingen.",
+   "systeem": "Hoe dieper je ingrijpt, hoe groter de hefboom."
+  }
+ },
+ {
+  "ronde": 3,
+  "type": "volgorde",
+  "categorie": "Klimaat · Causale keten",
+  "vraag": "Zet de causale keten van het versterkte broeikaseffect in de juiste volgorde.",
+  "items": [
+   "Verbranding van fossiele brandstoffen",
+   "Hogere CO₂-concentratie in de atmosfeer",
+   "Meer warmtestraling wordt vastgehouden",
+   "Hogere gemiddelde temperatuur op aarde"
+  ],
+  "uitleg": {
+   "goed": "Uitstoot → concentratie → stralingsforcering → opwarming.",
+   "concept": "Versterkt broeikaseffect en koolstofbudget.",
+   "afleider": "Het is de cumulatieve concentratie (de voorraad), niet alleen de jaarlijkse uitstoot (de stroom), die de opwarming bepaalt.",
+   "systeem": "Voorraad-en-stroomdenken: ook bij dalende uitstoot blijft de voorraad CO₂ voorlopig groeien."
+  }
+ },
+ {
+  "ronde": 3,
+  "type": "volgorde",
+  "categorie": "Ecologische grenzen · Stikstof",
+  "vraag": "Zet de causale keten van de stikstofcrisis in de juiste volgorde.",
+  "items": [
+   "Intensieve veehouderij met veel mest",
+   "Uitstoot van ammoniak naar de lucht",
+   "Stikstofdepositie in natuurgebieden",
+   "Verdringing van kwetsbare plantensoorten door ‘stikstofminnaars’"
+  ],
+  "uitleg": {
+   "goed": "Bron → emissie → depositie → effect op het ecosysteem.",
+   "concept": "Stikstofcrisis en de biogeochemische grens.",
+   "afleider": "Depositie (neerslag op natuur) is iets anders dan emissie (uitstoot): beleid stuurt vaak op de één en meet de ander.",
+   "systeem": "Biodiversiteitsverlies werkt weer door in bestuiving en bodemkwaliteit: effecten keren terug in het systeem."
+  }
+ },
+ {
+  "ronde": 3,
+  "type": "volgorde",
+  "categorie": "LCA",
+  "vraag": "Zet de vier fasen van een LCA (ISO 14040) in de juiste volgorde.",
+  "items": [
+   "Doel en reikwijdte bepalen",
+   "Inventarisatie van in- en outputs (LCI)",
+   "Effectbeoordeling (LCIA)",
+   "Interpretatie"
+  ],
+  "uitleg": {
+   "goed": "Eerst afbakenen (functionele eenheid, systeemgrenzen), dan stromen verzamelen, dan omrekenen naar milieu-effecten, dan interpreteren.",
+   "concept": "Levenscyclusanalyse volgens ISO 14040/44.",
+   "afleider": "Inventarisatie en effectbeoordeling worden vaak omgedraaid; zonder inventaris heb je niets om te beoordelen.",
+   "systeem": "De gekozen systeemgrens bepaalt sterk de uitkomst: een kritisch punt in elke LCA."
+  }
+ },
+ {
+  "ronde": 3,
+  "type": "volgorde",
+  "categorie": "Systeemdynamiek · Rebound",
+  "vraag": "Zet de keten van het rebound-effect in de juiste volgorde.",
+  "items": [
+   "Een autofabrikant maakt auto’s 30% zuiniger",
+   "De kosten per gereden kilometer dalen",
+   "Mensen gaan meer en verder rijden",
+   "Een deel van de verwachte energiebesparing verdwijnt"
+  ],
+  "uitleg": {
+   "goed": "Efficiëntie → lagere kosten → meer gebruik → besparing wordt (deels) tenietgedaan.",
+   "concept": "Rebound-effect (Jevons-paradox bij volledig of meer dan volledig terugveren).",
+   "afleider": "Efficiëntie is niet hetzelfde als absolute reductie: het gedrag reageert op de lagere kosten.",
+   "systeem": "Combineer efficiëntie met plafonds of beprijzing om rebound te voorkomen."
+  }
+ },
+ {
+  "ronde": 3,
+  "type": "volgorde",
+  "categorie": "Rapportage · CSRD",
+  "vraag": "Zet de stappen van een dubbele-materialiteitsanalyse onder de CSRD in een logische volgorde.",
+  "items": [
+   "Context, waardeketen en stakeholders in kaart brengen",
+   "Impacts, risico’s en kansen (IRO’s) identificeren",
+   "Materialiteit beoordelen vanuit impact én financieel perspectief",
+   "Materiële onderwerpen rapporteren volgens de ESRS"
+  ],
+  "uitleg": {
+   "goed": "Begrijpen → identificeren → beoordelen → rapporteren.",
+   "concept": "Dubbele materialiteit (CSRD/ESRS, EFRAG-richtlijnen).",
+   "afleider": "Wie begint met rapporteren of meteen gaat beoordelen, mist stakeholders en ketenimpacts.",
+   "systeem": "Stakeholders zijn een bron van informatie over impact, niet alleen een doelgroep."
+  }
+ },
+ {
+  "ronde": 3,
+  "type": "volgorde",
+  "categorie": "Klimaat · Feedback",
+  "vraag": "Zet de albedo-feedback in het Noordpoolgebied in de juiste volgorde.",
+  "items": [
+   "De aarde warmt op",
+   "Zee-ijs smelt",
+   "Donker zeewater neemt meer zonlicht op (lager albedo)",
+   "De opwarming versnelt verder"
+  ],
+  "uitleg": {
+   "goed": "Opwarming → minder ijs → minder reflectie → extra opwarming.",
+   "concept": "Versterkende feedbackloop (R-loop) en mogelijk tipping point.",
+   "afleider": "Dit is geen balancerende loop: het eindpunt versterkt het beginpunt.",
+   "systeem": "Zulke loops maken het koolstofbudget kleiner dan je lineair zou verwachten."
+  }
+ },
+ {
+  "ronde": 3,
+  "type": "volgorde",
+  "categorie": "Complexiteit · Lock-in",
+  "vraag": "Zet de keten van een lock-in in de energietransitie in de juiste volgorde.",
+  "items": [
+   "Een grote investering in een nieuwe kolencentrale",
+   "Een afschrijvingstermijn van tientallen jaren",
+   "Een sterk belang om de centrale zo lang mogelijk te laten draaien",
+   "Vertraging van de overstap naar duurzame energie"
+  ],
+  "uitleg": {
+   "goed": "Investering → lange terugverdientijd → gevestigd belang → vertraagde transitie.",
+   "concept": "Lock-in en padafhankelijkheid (carbon lock-in).",
+   "afleider": "Een lock-in ontstaat niet door slechte wil, maar door economische logica die in de tijd doorwerkt.",
+   "systeem": "Elke nieuwe fossiele investering verkleint de toekomstige keuzeruimte."
+  }
+ },
+ {
+  "ronde": 3,
+  "type": "volgorde",
+  "categorie": "Systeemdenken · Aanpak",
+  "vraag": "Zet de stappen van een systeemanalyse met een causal loop diagram in een logische volgorde.",
+  "items": [
+   "Het probleem en de systeemgrens afbakenen",
+   "Relevante variabelen identificeren",
+   "Causale relaties en R- en B-loops tekenen",
+   "Hefboompunten voor interventie bepalen"
+  ],
+  "uitleg": {
+   "goed": "Afbakenen → variabelen → verbanden en loops → interventies.",
+   "concept": "Causal loop diagrams (CLD) en hefboompunten.",
+   "afleider": "Wie direct interventies kiest zonder loops te tekenen, mist onbedoelde gevolgen.",
+   "systeem": "Het diagram is een denkinstrument: het gesprek erover is minstens zo waardevol als de tekening."
+  }
+ },
+ {
+  "ronde": 4,
+  "type": "koppelen",
+  "categorie": "Systeemdynamiek",
+  "vraag": "Koppel elk concept aan de juiste casus.",
+  "paren": [
+   [
+    "Lock-in",
+    "Een infrastructuurkeuze uit het verleden beperkt de toekomstige opties"
+   ],
+   [
+    "Externaliteit",
+    "Milieuschade wordt niet in de marktprijs verwerkt"
+   ],
+   [
+    "Rebound-effect",
+    "Een efficiëntiewinst leidt tot meer gebruik"
+   ],
+   [
+    "Tragedy of the commons",
+    "Iedereen gebruikt een gedeelde bron, die daardoor uitgeput raakt"
+   ]
+  ],
+  "uitleg": {
+   "goed": "Elk concept beschrijft een ander mechanisme waardoor goedbedoelde of rationele keuzes toch tot een niet-duurzame uitkomst leiden.",
+   "concept": "Lock-in · externaliteit · rebound · commons.",
+   "afleider": "Externaliteit en commons worden vaak verward: een externaliteit gaat over kosten bij derden, een commons over een gedeelde, uitputbare bron."
+  }
+ },
+ {
+  "ronde": 4,
+  "type": "koppelen",
+  "categorie": "Feedback en kantelpunten",
+  "vraag": "Koppel elk concept aan de juiste casus.",
+  "paren": [
+   [
+    "Versterkende loop (R)",
+    "Meer zonnepanelen → lagere prijs → nog meer zonnepanelen"
+   ],
+   [
+    "Balancerende loop (B)",
+    "Hoge energieprijs → minder vraag → prijs daalt weer"
+   ],
+   [
+    "Tipping point",
+    "Een koraalrif herstelt na een hittegolf niet meer en wordt een algenveld"
+   ],
+   [
+    "Padafhankelijkheid",
+    "Het QWERTY-toetsenbord blijft de standaard ondanks betere alternatieven"
+   ]
+  ],
+  "uitleg": {
+   "goed": "Een R-loop versterkt zichzelf, een B-loop zoekt evenwicht, een tipping point is een omslag naar een nieuwe toestand en padafhankelijkheid laat het verleden de keuzes bepalen.",
+   "concept": "Causal loop diagrams: R- en B-loops.",
+   "afleider": "‘Positief’ (versterkend) is niet altijd goed: dezelfde R-loop kan ook een neerwaartse spiraal zijn."
+  }
+ },
+ {
+  "ronde": 4,
+  "type": "koppelen",
+  "categorie": "R-ladder",
+  "vraag": "Koppel elke R-strategie aan de juiste casus.",
+  "paren": [
+   [
+    "Refuse",
+    "Een hotel stopt helemaal met het aanbieden van plastic minishampoos"
+   ],
+   [
+    "Reduce",
+    "Een webshop gebruikt 35% minder karton per verpakking"
+   ],
+   [
+    "Repair",
+    "Een repair café maakt kapotte broodroosters weer werkend"
+   ],
+   [
+    "Recover",
+    "Restafval wordt verbrand voor stadsverwarming"
+   ]
+  ],
+  "uitleg": {
+   "goed": "Refuse voorkomt het product, Reduce gebruikt minder, Repair herstelt en Recover haalt alleen nog energie terug.",
+   "concept": "R-ladder (R0–R9).",
+   "afleider": "Refuse en Reduce lijken op elkaar: bij Refuse verdwijnt het product, bij Reduce wordt het efficiënter."
+  }
+ },
+ {
+  "ronde": 4,
+  "type": "koppelen",
+  "categorie": "Rapportage",
+  "vraag": "Koppel elk begrip aan de juiste omschrijving of casus.",
+  "paren": [
+   [
+    "Inside-out",
+    "Een bedrijf brengt in kaart hoe zijn ontbossing de biodiversiteit aantast"
+   ],
+   [
+    "Outside-in",
+    "Droogte bedreigt de aanvoer van grondstoffen en dus de omzet"
+   ],
+   [
+    "CSRD",
+    "EU-richtlijn die bedrijven verplicht duurzaamheidsinformatie volgens de ESRS te rapporteren"
+   ],
+   [
+    "IIRC-raamwerk",
+    "Geïntegreerde verslaggeving over waardecreatie met zes kapitalen"
+   ]
+  ],
+  "uitleg": {
+   "goed": "Inside-out = impactmaterialiteit, outside-in = financiële materialiteit. De CSRD verplicht beide; het IIRC-raamwerk gaat over geïntegreerde waardecreatie.",
+   "concept": "Dubbele materialiteit, CSRD en IIRC.",
+   "afleider": "Outside-in wordt vaak verward met ‘impact op de buitenwereld’: het is juist de impact van buiten naar binnen."
+  }
+ },
+ {
+  "ronde": 4,
+  "type": "koppelen",
+  "categorie": "6 kapitalen",
+  "vraag": "Koppel elk kapitaal aan het juiste voorbeeld van een brouwerij.",
+  "paren": [
+   [
+    "Natuurlijk kapitaal",
+    "Schoon grondwater dat de brouwerij oppompt"
+   ],
+   [
+    "Intellectueel kapitaal",
+    "Een patent op een gistingsproces dat restwarmte hergebruikt"
+   ],
+   [
+    "Geproduceerd kapitaal",
+    "Brouwketels, gebouwen en vrachtwagens"
+   ],
+   [
+    "Sociaal-relationeel kapitaal",
+    "Het vertrouwen van omwonenden en lokale boeren"
+   ]
+  ],
+  "uitleg": {
+   "goed": "Het IIRC onderscheidt zes kapitalen die een organisatie gebruikt en beïnvloedt.",
+   "concept": "Zes kapitalen (IIRC).",
+   "afleider": "Een patent is intellectueel kapitaal (organisatiekennis), geen menselijk kapitaal (de vaardigheden van mensen)."
+  }
+ },
+ {
+  "ronde": 4,
+  "type": "koppelen",
+  "categorie": "Morele ontkoppeling (Bandura)",
+  "vraag": "Koppel elk mechanisme aan de juiste uitspraak.",
+  "paren": [
+   [
+    "Morele rechtvaardiging",
+    "‘We kappen dit bos, maar zo creëren we banen in een arme regio.’"
+   ],
+   [
+    "Eufemistisch taalgebruik",
+    "‘Er is sprake van een tijdelijke afwijking in de lozingswaarden.’"
+   ],
+   [
+    "Gunstige vergelijking",
+    "‘Vergeleken met onze concurrenten stoten wij nauwelijks uit.’"
+   ],
+   [
+    "Verplaatsing van verantwoordelijkheid",
+    "‘De directie heeft dit zo besloten, ik voer alleen uit.’"
+   ]
+  ],
+  "uitleg": {
+   "goed": "Volgens Bandura kunnen mensen schadelijk gedrag moreel ‘uitschakelen’ zonder hun normen los te laten.",
+   "concept": "Morele ontkoppeling (Bandura).",
+   "afleider": "Rechtvaardiging en gunstige vergelijking lijken op elkaar: rechtvaardiging beroept zich op een hoger doel, vergelijking op ‘anderen zijn erger’."
+  }
+ },
+ {
+  "ronde": 4,
+  "type": "koppelen",
+  "categorie": "Denkers",
+  "vraag": "Koppel elke denker aan de juiste kerngedachte.",
+  "paren": [
+   [
+    "Milton Friedman",
+    "De enige maatschappelijke verantwoordelijkheid van een bedrijf is winst maken"
+   ],
+   [
+    "Thomas Piketty",
+    "Als r > g, concentreert vermogen zich steeds meer"
+   ],
+   [
+    "Bruno Latour",
+    "Mensen én dingen zijn actoren in netwerken"
+   ],
+   [
+    "Langdon Winner",
+    "Artefacten hebben politiek"
+   ]
+  ],
+  "uitleg": {
+   "goed": "Friedman (aandeelhoudersmodel), Piketty (ongelijkheid), Latour (ANT) en Winner (politiek van techniek).",
+   "concept": "Business ethics, economie en technologie.",
+   "afleider": "Latour en Winner liggen dicht bij elkaar; Winner legt de nadruk op macht en politieke keuzes in het ontwerp."
+  }
+ },
+ {
+  "ronde": 4,
+  "type": "koppelen",
+  "categorie": "Planetaire grenzen",
+  "vraag": "Koppel elke planetaire grens aan de juiste casus.",
+  "paren": [
+   [
+    "Klimaatverandering",
+    "De CO₂-concentratie stijgt boven 420 ppm"
+   ],
+   [
+    "Integriteit van de biosfeer",
+    "Soorten sterven tientallen keren sneller uit dan natuurlijk"
+   ],
+   [
+    "Zoetwaterverandering",
+    "Grondwater raakt uitgeput door intensieve irrigatie"
+   ],
+   [
+    "Nieuwe entiteiten",
+    "Microplastics en PFAS hopen zich op in het milieu"
+   ]
+  ],
+  "uitleg": {
+   "goed": "Rockström e.a. onderscheiden negen grenzen; meerdere zijn al overschreden, waaronder deze vier.",
+   "concept": "9 planetaire grenzen.",
+   "afleider": "Nieuwe entiteiten zijn door mensen gemaakte stoffen, die niet onder ‘biosfeer’ vallen, ook al schaden ze die."
+  }
+ },
+ {
+  "ronde": 4,
+  "type": "koppelen",
+  "categorie": "4 sferen",
+  "vraag": "Koppel elke sfeer aan de casus die er het meest direct mee samenhangt.",
+  "paren": [
+   [
+    "Lithosfeer",
+    "Uitputting van zeldzame aardmetalen voor accu’s"
+   ],
+   [
+    "Atmosfeer",
+    "Smog boven een industriestad"
+   ],
+   [
+    "Hydrosfeer",
+    "Verzilting van rivierwater door lage afvoer"
+   ],
+   [
+    "Biosfeer",
+    "Massale insectensterfte in landbouwgebieden"
+   ]
+  ],
+  "uitleg": {
+   "goed": "De vier sferen zijn gesteente en bodem, lucht, water en leven; samen vormen ze het aardsysteem.",
+   "concept": "4 sferen.",
+   "afleider": "Veel problemen raken meerdere sferen; het gaat hier om de sfeer die het meest direct geraakt wordt."
+  }
+ },
+ {
+  "ronde": 4,
+  "type": "koppelen",
+  "categorie": "Circulaire businessmodellen",
+  "vraag": "Koppel elk businessmodel aan de juiste casus.",
+  "paren": [
+   [
+    "Product-as-a-Service",
+    "Een luchthaven betaalt per uur licht; de leverancier blijft eigenaar van de lampen"
+   ],
+   [
+    "Deelplatform",
+    "Buren lenen via een app elkaars boormachine"
+   ],
+   [
+    "Levensduurverlenging",
+    "Een fabrikant geeft 10 jaar garantie en levert lang reserveonderdelen"
+   ],
+   [
+    "Refurbish",
+    "Gebruikte laptops worden opgeknapt en met garantie doorverkocht"
+   ]
+  ],
+  "uitleg": {
+   "goed": "Elk model behoudt waarde op een andere manier: via eigendom, gedeeld gebruik, langer gebruik of een tweede leven.",
+   "concept": "Circulaire businessmodellen.",
+   "afleider": "Bij PaaS blijft de producent eigenaar; bij een deelplatform zijn de gebruikers eigenaar en faciliteert het platform."
+  }
+ },
+ {
+  "ronde": 4,
+  "type": "koppelen",
+  "categorie": "Ontwerp",
+  "vraag": "Koppel elke ontwerpbenadering aan de juiste casus.",
+  "paren": [
+   [
+    "Biomimicry",
+    "Klittenband, geïnspireerd op de haakjes van de klis"
+   ],
+   [
+    "Regeneratief design",
+    "Een voedselbos dat de bodem en de biodiversiteit actief herstelt"
+   ],
+   [
+    "Life’s Principles",
+    "Een ontwerpteam toetst aan ‘gebruik lokaal beschikbare materialen en energie’"
+   ],
+   [
+    "Eco-efficiëntie",
+    "Een fabriek verbruikt 20% minder energie per product"
+   ]
+  ],
+  "uitleg": {
+   "goed": "Biomimicry leert van de natuur, Life’s Principles zijn de ontwerpcriteria daarvan, regeneratief herstelt en eco-efficiëntie is ‘minder slecht’.",
+   "concept": "Biomimicry, Life’s Principles en regeneratief design.",
+   "afleider": "Eco-efficiëntie verkleint schade per eenheid, maar herstelt niets; regeneratief ontwerpen gaat verder dan ‘neutraal’."
+  }
+ },
+ {
+  "ronde": 4,
+  "type": "koppelen",
+  "categorie": "Complexiteit en gedrag",
+  "vraag": "Koppel elk concept aan de juiste casus.",
+  "paren": [
+   [
+    "Wicked problem",
+    "De woningnood: elke oplossing raakt stikstof, ruimte, netcongestie en betaalbaarheid"
+   ],
+   [
+    "Kuddegedrag",
+    "Beleggers volgen massaal een groene hype, waardoor een zeepbel ontstaat"
+   ],
+   [
+    "Structure vs. agency",
+    "Is vliegschaamte effectiever dan een vliegtaks?"
+   ],
+   [
+    "Neoliberalisme",
+    "De overheid laat verduurzaming over aan marktwerking en individuele keuze"
+   ]
+  ],
+  "uitleg": {
+   "goed": "Elk concept verklaart een ander niveau: probleemstructuur, groepsgedrag, de verhouding individu–systeem en economische ideologie.",
+   "concept": "Wicked problems, kuddegedrag, structure vs. agency en neoliberalisme.",
+   "afleider": "De vraag ‘schaamte of taks’ gaat over waar verandering vandaan komt (individu of structuur), niet over groepsgedrag."
+  }
+ },
+ {
+  "ronde": 5,
+  "type": "mc",
+  "categorie": "Businessmodel × prikkels",
+  "vraag": "Een kantoormeubelbedrijf start een circulair leasemodel. De bonussen van het management blijven gekoppeld aan omzet uit nieuwe verkoop en kwartaalwinst. Na twee jaar wordt het leasemodel stil afgebouwd. Welke analyse verklaart dit het best?",
+  "opties": [
+   "Het systeemdoel (omzet uit nieuwe verkoop) is een sterker hefboompunt dan het nieuwe model en duwt het terug",
+   "PaaS staat op de R-ladder lager dan recycling, waardoor het leasemodel inhoudelijk nooit levensvatbaar kon zijn voor dit bedrijf",
+   "Klanten vertoonden kuddegedrag: zolang concurrenten geen leasemodel aanboden, bleef het kopen van nieuwe meubels de norm in de markt",
+   "Er trad een rebound-effect op: omdat leasen goedkoper was dan kopen, namen klanten meer meubels af dan ze eigenlijk nodig hadden"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Zolang beloning en KPI’s de lineaire logica volgen, werkt het systeemdoel als balancerende kracht tegen het circulaire initiatief.",
+   "concept": "Meadows (systeemdoel > losse interventie), het aandeelhoudersmodel en financialisering.",
+   "afleider": "PaaS is juist een sterke circulaire strategie; kuddegedrag en rebound verklaren niet waarom het bedrijf zélf het model afbouwt.",
+   "systeem": "Circulariteit vraagt om aangepaste prikkels: KPI’s, bonussen en eigendomsstructuur."
+  }
+ },
+ {
+  "ronde": 5,
+  "type": "mc",
+  "categorie": "Greenwashing × systeemdenken",
+  "vraag": "Een kledingmerk lanceert een ‘conscious collection’ met 5% gerecycled polyester en communiceert die breed. Tegelijk groeit de totale productie met 20% per jaar. Wat is de scherpste analyse?",
+  "opties": [
+   "Selectieve focus op een klein deel verhult dat de absolute impact (inside-out) stijgt: dit is greenwashing",
+   "Recyclen staat op de R-ladder, dus zolang het aandeel gerecycled materiaal elk jaar groeit, is de duurzaamheidsclaim inhoudelijk terecht",
+   "Dit is alleen een juridisch probleem als het merk onder de CSRD-rapportageplicht valt en de claim in het jaarverslag opneemt",
+   "Dit is een rebound-effect: efficiënter materiaalgebruik leidt tot meer productie"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "De claim richt de aandacht op een detail, terwijl het werkelijke probleem (volume) groeit; relatieve verbetering valt weg tegen absolute groei.",
+   "concept": "Greenwashing (selectieve framing), inside-out impact en het verschil tussen absolute en relatieve ontkoppeling.",
+   "afleider": "Misleidende claims zijn onder EU-consumentenregels voor élk bedrijf verboden, niet alleen voor CSRD-plichtigen. Rebound vraagt om een efficiëntiewinst die het extra gebruik veroorzaakt; die ontbreekt hier.",
+   "systeem": "In een groeimodel worden kleine verbeteringen ingehaald door het volume."
+  }
+ },
+ {
+  "ronde": 5,
+  "type": "mc",
+  "categorie": "Beleid × onbedoelde gevolgen",
+  "vraag": "Een gemeente subsidieert elektrische auto’s om de CO₂-uitstoot te verlagen. Na enkele jaren rijden bewoners meer kilometers, nemen de files toe en kunnen bedrijven door netcongestie niet uitbreiden. Welke combinatie verklaart dit?",
+  "opties": [
+   "Een rebound-effect plus een te smalle systeemgrens die interacties met mobiliteit en het stroomnet negeerde",
+   "Een tipping point in het klimaatsysteem: de opwarming versnelt zelfstandig en maakt het effect van de lokale subsidie volledig ongedaan",
+   "Een tragedy of the commons in de autobranche",
+   "Lock-in door het bestaande gasnet, waardoor elektrificatie van mobiliteit en warmte in deze gemeente technisch onmogelijk wordt"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Lagere kosten per kilometer leiden tot meer rijden (rebound), en de extra stroomvraag botst met netcapaciteit. Dat zijn effecten buiten de oorspronkelijke systeemgrens.",
+   "concept": "Rebound, systeemgrenzen, netcongestie en onbedoelde consequenties.",
+   "afleider": "Een klimaat-tipping point werkt niet op deze schaal en termijn; de lock-in van het gasnet verklaart de netcongestie niet.",
+   "systeem": "Teken een CLD vóórdat je ingrijpt: welke loops activeer je onbedoeld?"
+  }
+ },
+ {
+  "ronde": 5,
+  "type": "mc",
+  "categorie": "Stikstof × verantwoordelijkheid",
+  "vraag": "Een melkveehouder zegt: ‘Ik voldoe aan alle regels.’ De overheid vindt dat boeren verantwoordelijkheid moeten nemen. De bank eist groei om de lening af te lossen en de zuivelketen betaalt per liter. Wat is de rijkste analyse?",
+  "opties": [
+   "Individuele keuzes zijn ingebed in structuren (schulden, ketenprijzen) die op groei sturen: structure vs. agency plus financiële lock-in",
+   "Dit is morele ontkoppeling: de boer verschuilt zich achter de regels om zijn eigen verantwoordelijkheid voor de stikstofuitstoot niet onder ogen te hoeven zien",
+   "Het is een tam probleem dat met één technische innovatie, zoals een emissiearme stalvloer, volledig en blijvend op te lossen is",
+   "Dit is vooral kuddegedrag: boeren kopiëren elkaars bedrijfsmodel"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "De boer heeft handelingsruimte (agency), maar schulden, ketenafspraken en beleid vormen een structuur die groei afdwingt (lock-in).",
+   "concept": "Structure vs. agency, lock-in, financialisering en wicked problems.",
+   "afleider": "Morele ontkoppeling legt alles bij het individu en mist de structuur; ‘tam probleem’ ontkent het wicked karakter van de stikstofcrisis.",
+   "systeem": "Hefboompunten liggen ook bij banken en ketenpartijen, niet alleen bij de boer."
+  }
+ },
+ {
+  "ronde": 5,
+  "type": "mc",
+  "categorie": "EU-claims × compensatie",
+  "vraag": "Een koffiemerk compenseert zijn uitstoot door elders bomen te laten planten en noemt zijn product ‘klimaatneutraal’. Hoe beoordeel je dit in het licht van de nieuwe EU-regels voor duurzaamheidsclaims?",
+  "opties": [
+   "Claims dat een product klimaatneutraal is op basis van compensatie worden onder de EU-richtlijn (2024/825) verboden",
+   "Toegestaan, zolang de bomen onafhankelijk gecertificeerd zijn en de compensatie aantoonbaar in hetzelfde kalenderjaar plaatsvindt als de uitstoot",
+   "Alleen relevant voor grote bedrijven die onder de CSRD vallen; kleinere koffiemerken mogen deze claim zonder meer blijven voeren",
+   "Prima: bomen vormen een balancerende loop die de uitstoot neutraliseert"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "De EU-richtlijn ‘Empowering Consumers for the Green Transition’ verbiedt vanaf 27 september 2026 productclaims als ‘klimaatneutraal’ die op compensatie berusten.",
+   "concept": "EU-regels rond duurzaamheidsclaims; greenwashing.",
+   "afleider": "Certificering maakt de claim niet toegestaan; de regel geldt voor alle handelaren richting consumenten, niet alleen voor CSRD-plichtigen.",
+   "systeem": "Compensatie is onzeker en tijdelijk (bomen kunnen afbranden), terwijl fossiele CO₂ eeuwen blijft: geen echte balans."
+  }
+ },
+ {
+  "ronde": 5,
+  "type": "mc",
+  "categorie": "Deeleconomie × LCA × financialisering",
+  "vraag": "Een deelscooterplatform noemt zichzelf duurzaam. Onderzoek toont dat ritten vooral lopen en OV vervangen, dat scooters maar ruim een jaar meegaan en dat investeerders snelle groei eisen. Wat is de beste analyse?",
+  "opties": [
+   "De duurzaamheid hangt af van wat je vervangt (LCA-referentie); groeidruk van investeerders stuurt op volume in plaats van levensduur",
+   "Een deelplatform verlaagt per definitie het materiaalgebruik, omdat meerdere gebruikers één voertuig delen; de duurzaamheidsclaim klopt dus gewoon",
+   "Het platform werkt als Product-as-a-Service: de aanbieder blijft eigenaar van de scooters en het model is daarmee automatisch circulair en duurzaam",
+   "De scooters zijn elektrisch, dus de klimaatimpact is nul"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Een LCA vergelijkt met het alternatief: vervang je lopen of OV, dan is de netto impact hoger. Financialisering (snelle groei) ondermijnt levensduurverlenging.",
+   "concept": "LCA (functionele eenheid en referentie), deelplatforms en financialisering.",
+   "afleider": "‘Delen = duurzaam’ en ‘PaaS = circulair’ zijn kortere-termijnaannames; het hangt af van levensduur en gebruik. Elektrisch is nooit ‘nul’ door productie en accu.",
+   "systeem": "Het businessmodel (groeidoel) bepaalt of de circulaire belofte waargemaakt wordt."
+  }
+ },
+ {
+  "ronde": 5,
+  "type": "mc",
+  "categorie": "Commons × morele economie",
+  "vraag": "Een dorp beheert al eeuwen gezamenlijk een bos, met eigen regels, onderlinge controle en sancties. Het bos is gezond. Wat leert deze casus over commons?",
+  "opties": [
+   "Gemeenschappen kunnen commons duurzaam beheren met eigen instituties, dus tragedie is niet onvermijdelijk (Ostrom)",
+   "Het bewijst dat alleen privatisering een commons kan redden: de dorpelingen gedragen zich in feite als eigenaren met eigen belang bij het bos",
+   "Het laat zien dat alleen een sterke centrale overheid met wetgeving en handhaving uitputting van gedeelde natuurlijke bronnen kan voorkomen",
+   "Het is toeval: zonder marktprijs raakt elke gedeelde bron uiteindelijk uitgeput"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Elinor Ostrom toonde aan dat collectieve zelforganisatie, met duidelijke regels, monitoring en sancties, commons duurzaam kan beheren.",
+   "concept": "Commons en morele economie: economie ingebed in sociale normen.",
+   "afleider": "Privatisering (de neoliberale oplossing) en centrale staatscontrole zijn Hardins twee ‘enige uitwegen’, die Ostrom empirisch nuanceerde.",
+   "systeem": "Zelforganisatie is volgens Meadows een sterk hefboompunt."
+  }
+ },
+ {
+  "ronde": 5,
+  "type": "mc",
+  "categorie": "Neoliberalisme × ongelijkheid",
+  "vraag": "Een overheid laat het verduurzamen van woningen volledig over aan de markt, via subsidies die huiseigenaren eerst zelf moeten voorschieten. Na tien jaar blijken vooral welgestelde huishoudens geprofiteerd te hebben. Wat is de beste analyse?",
+  "opties": [
+   "Marktlogica plus voorfinanciering bevoordeelt wie al vermogen heeft; de sociale dimensie (People) wordt genegeerd",
+   "Dit is een rebound-effect: verduurzaamde huizen worden comfortabeler, waardoor bewoners juist meer energie gaan verbruiken dan voorheen",
+   "Dit is een tipping point in de woningmarkt",
+   "Dit is een LCA-fout: de systeemgrens rond de woning was te smal gekozen, waardoor de materiaalimpact van isolatie niet werd meegenomen"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Wie vermogen heeft, kan investeren en profiteren; wie dat niet heeft, blijft met hoge energielasten zitten. Ongelijkheid wordt zo versterkt.",
+   "concept": "Neoliberalisme, Piketty (vermogen bepaalt kansen) en de sociale dimensie van duurzaamheid.",
+   "afleider": "Rebound kan meespelen, maar verklaart niet wíé profiteert; het gaat hier om verdeling, niet om milieu-efficiëntie.",
+   "systeem": "Een rechtvaardige transitie vraagt om aandacht voor verdeling: ‘people’ is geen bijzaak."
+  }
+ },
+ {
+  "ronde": 5,
+  "type": "mc",
+  "categorie": "Systeemdynamiek × klimaatadaptatie",
+  "vraag": "Een waterschap verhoogt steeds de dijken. Omdat het ‘veilig voelt’, wordt er achter de dijken steeds meer gebouwd, waardoor de schade bij een doorbraak steeds groter wordt. Welke dynamiek is dit?",
+  "opties": [
+   "Fixes that fail: de oplossing vergroot via een vertraagde, versterkende loop juist het onderliggende risico",
+   "Een balancerende loop: hogere dijken verlagen het overstromingsrisico, waardoor het systeem als geheel steeds stabieler en veiliger wordt",
+   "Een negatieve externaliteit van de bouwsector, die de kosten van het overstromingsrisico afwentelt op het waterschap en de belastingbetaler",
+   "Een natuurlijk tipping point in het rivierensysteem"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "De symptoomoplossing (hogere dijk) lokt gedrag uit (meer bouwen) dat het risico en de schadepotentie vergroot: het ‘levee effect’.",
+   "concept": "Systeemarchetype ‘fixes that fail’ (Senge); R-loops en vertraging.",
+   "afleider": "Er is wel een balancerende loop (dijk ↔ waterstand), maar die verbergt de versterkende loop van bebouwing en risico.",
+   "systeem": "Fundamentelere opties zijn ruimte voor de rivier en ander ruimtelijk beleid: ingrijpen op structuren in plaats van gebeurtenissen."
+  }
+ },
+ {
+  "ronde": 5,
+  "type": "mc",
+  "categorie": "CSRD × ketenverantwoordelijkheid",
+  "vraag": "Een chocoladeproducent concludeert dat ontbossing in de cacaoketen ‘niet materieel’ is, omdat het financiële risico voor het bedrijf klein is. Wat is de fout?",
+  "opties": [
+   "Onder dubbele materialiteit is een onderwerp al materieel als de impact (inside-out) significant is, ook zonder financieel risico",
+   "Er is geen fout: onder de CSRD is financiële materialiteit leidend, en impact telt alleen mee als die ook tot financieel risico voor het bedrijf leidt",
+   "Ontbossing valt buiten de scope van de rapportage, omdat het in de keten bij toeleveranciers gebeurt en niet in de eigen operaties van het bedrijf",
+   "De fout is dat het bedrijf het IIRC-raamwerk had moeten gebruiken in plaats van de CSRD"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Onder de CSRD is een onderwerp materieel als het vanuit impact óf vanuit financieel perspectief materieel is.",
+   "concept": "Dubbele materialiteit, de waardeketen en de CSRD/ESRS.",
+   "afleider": "De CSRD omvat nadrukkelijk de waardeketen (upstream en downstream); financiële materialiteit is niet ‘leidend’ maar één van de twee toetsen.",
+   "systeem": "Wat buiten de eigen poort gebeurt, is vaak het grootste deel van de impact."
+  }
+ },
+ {
+  "ronde": 5,
+  "type": "mc",
+  "categorie": "Technologie × rechtvaardigheid",
+  "vraag": "Een gemeente laat een algoritme bepalen welke wijken als eerste op het warmtenet worden aangesloten, op basis van ‘rendabiliteit’. Wijken met lage inkomens komen achteraan. Welke analyse is het sterkst?",
+  "opties": [
+   "Het algoritme is niet neutraal: de waarde ‘rendabiliteit’ zit ingebouwd en het systeem handelt mee als actor (Winner, Latour)",
+   "Het algoritme is een neutraal hulpmiddel dat alleen data verwerkt; de verantwoordelijkheid voor de uitkomst ligt volledig bij de gebruikers ervan",
+   "Dit is padafhankelijkheid: wijken met een oud gasnet worden logischerwijs later aangesloten, omdat de bestaande infrastructuur daar nog jaren meegaat",
+   "Dit is een balancerende loop die de warmtevraag stabiliseert"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Ontwerpkeuzes in het algoritme verdelen lusten en lasten; techniek handelt hier moreel mee.",
+   "concept": "Technologie is niet neutraal (Winner), ANT (Latour) en technologie als morele interventie.",
+   "afleider": "‘Neutraal hulpmiddel’ is precies de opvatting die Winner en Latour bekritiseren; het gasnet verklaart de volgorde van aansluiten niet.",
+   "systeem": "Wie het criterium kiest, kiest de uitkomst: maak waarden expliciet in het ontwerp."
+  }
+ },
+ {
+  "ronde": 5,
+  "type": "mc",
+  "categorie": "TBL × planetaire grenzen",
+  "vraag": "Een bedrijf scoort positief op alle drie TBL-pijlers: de winst stijgt, er komen banen bij en de CO₂-uitstoot per product daalt met 15%. Toch stijgt de totale uitstoot. Waarom kan het bedrijf zo toch bijdragen aan het overschrijden van planetaire grenzen?",
+  "opties": [
+   "Relatieve verbeteringen per product zeggen niets over absolute ecologische grenzen, en TBL kent geen plafond",
+   "TBL garandeert sterke duurzaamheid: zolang alle drie de pijlers verbeteren, draagt het bedrijf per definitie niet bij aan grensoverschrijding",
+   "Planetaire grenzen gelden alleen voor landen en de wereld als geheel, waardoor ze voor de beoordeling van individuele bedrijven niet relevant zijn",
+   "Rockström meet grenzen juist per product, dus de daling van 15% is voldoende"
+  ],
+  "correct": 0,
+  "uitleg": {
+   "goed": "Planetaire grenzen zijn absolute plafonds. Als het volume sneller groeit dan de efficiëntie, stijgt de totale druk.",
+   "concept": "Triple Bottom Line versus planetaire grenzen; relatieve versus absolute ontkoppeling.",
+   "afleider": "TBL laat uitruil tussen pijlers toe (zwakke duurzaamheid) en koppelt niet aan ecologische grenzen; planetaire grenzen zijn mondiaal, niet per product.",
+   "systeem": "Zonder plafond werkt groei als versterkende loop die efficiëntiewinst opeet."
+  }
+ }
+]

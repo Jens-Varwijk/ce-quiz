@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CE Quiz</title>
+<meta name="description" content="Oefen-app met ruim 1000 vragen over circulaire economie, systeemdenken en business ethics.">
+<meta name="theme-color" content="#0d3b2c">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="CE Quiz">
+<style>
+:root{
+  --groen-900:#0d3b2c; --groen-800:#13503b; --groen-700:#1d6b4a; --groen-500:#2f9e64; --groen-300:#9ad8b0; --groen-100:#e3f4e8;
+  --bg:#f3f1ea; --kaart:#ffffff; --zand:#e7dfcd; --aarde:#7a5a3a; --tekst:#14251d; --zacht:#55675d; --lijn:#e2dccd;
+  --goed:#1f9d55; --goed-bg:#dff5e7; --fout:#c0392b; --fout-bg:#fbe3df; --geel:#b77800; --geel-bg:#fff3d6;
+  --knop-tekst:#ffffff; --schaduw:0 4px 18px rgba(13,59,44,.10); --r:18px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f1714; --kaart:#18231e; --zand:#2a3630; --tekst:#e8efe9; --zacht:#a3b4aa; --lijn:#2c3a33;
+    --groen-100:#1c3328; --groen-300:#6cc290; --aarde:#c9a77f;
+    --goed-bg:#173826; --fout-bg:#3b1f1b; --geel-bg:#3a2e12; --geel:#f0b545; --schaduw:0 4px 18px rgba(0,0,0,.35);
+  }
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--tekst);font-family:-apple-system,"Segoe UI",system-ui,Roboto,Arial,sans-serif;font-size:17px;line-height:1.45}
+body{min-height:100dvh}
+button{font:inherit;color:inherit;border:none;cursor:pointer;background:none}
+button:disabled{cursor:default}
+button:focus-visible{outline:3px solid var(--groen-500);outline-offset:2px}
+#app{max-width:560px;margin:0 auto;min-height:100dvh;display:flex;flex-direction:column;padding:env(safe-area-inset-top) 0 0}
+.scherm{flex:1;display:flex;flex-direction:column;padding:16px 16px calc(24px + env(safe-area-inset-bottom))}
+
+/* Kop */
+.kop{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.kop h1{font-size:1.45rem;margin:0;color:var(--tekst);letter-spacing:-.01em}
+.kop .logo{width:38px;height:38px;border-radius:11px;background:var(--groen-900);display:grid;place-items:center;font-size:1.25rem;flex:none}
+.kop .rechts{margin-left:auto;display:flex;gap:8px;align-items:center}
+.pil{background:var(--kaart);border-radius:999px;padding:5px 11px;font-weight:700;font-size:.9rem;box-shadow:var(--schaduw);white-space:nowrap}
+.icoonknop{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:1.2rem;background:var(--kaart);box-shadow:var(--schaduw);flex:none}
+
+/* Kaarten */
+.kaart{background:var(--kaart);border-radius:var(--r);box-shadow:var(--schaduw);padding:16px}
+.stack{display:flex;flex-direction:column;gap:12px}
+.label{display:inline-block;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--groen-700);background:var(--groen-100);padding:3px 9px;border-radius:999px}
+@media (prefers-color-scheme: dark){.label{color:var(--groen-300)}}
+.zacht{color:var(--zacht)}
+.klein{font-size:.85rem}
+h2{font-size:1.3rem;margin:.2em 0 .4em}
+
+/* Home */
+.niveau{display:flex;gap:14px;align-items:center}
+.niveau-cirkel{width:64px;height:64px;border-radius:50%;background:conic-gradient(var(--groen-500) calc(var(--p)*1%),var(--zand) 0);display:grid;place-items:center;flex:none}
+.niveau-cirkel span{width:50px;height:50px;border-radius:50%;background:var(--kaart);display:grid;place-items:center;font-weight:800;font-size:1.2rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px;text-align:center}
+.stats b{display:block;font-size:1.25rem}
+.stats small{color:var(--zacht);font-size:.75rem}
+.tegels{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tegel{background:var(--kaart);border-radius:var(--r);box-shadow:var(--schaduw);padding:16px 14px;text-align:left;display:flex;flex-direction:column;gap:4px;min-height:118px;transition:transform .12s}
+.tegel:active:not(:disabled){transform:scale(.97)}
+.tegel .ico{font-size:1.6rem}
+.tegel b{font-size:1.05rem}
+.tegel small{color:var(--zacht);font-size:.8rem;line-height:1.3}
+.tegel.hoofd{grid-column:1/-1;background:var(--groen-900);color:#fff;min-height:auto;flex-direction:row;align-items:center;gap:14px}
+.tegel.hoofd small{color:#cfe9d9}
+.tegel.hoofd .ico{font-size:2rem}
+.tegel:disabled{opacity:.5}
+.balk{height:8px;background:var(--zand);border-radius:6px;overflow:hidden}
+.balk i{display:block;height:100%;background:var(--groen-500);border-radius:6px}
+.onderwerp{display:flex;flex-direction:column;gap:6px;text-align:left;width:100%}
+.onderwerp .r{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.installeer{background:var(--geel-bg);color:var(--tekst);border-radius:14px;padding:12px 14px;font-size:.9rem;display:flex;gap:10px;align-items:center}
+.installeer button{margin-left:auto;background:var(--groen-700);color:#fff;border-radius:10px;padding:8px 12px;font-weight:700;white-space:nowrap}
+
+/* Quiz */
+.quizkop{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.voortgang{flex:1;height:10px;background:var(--zand);border-radius:6px;overflow:hidden}
+.voortgang i{display:block;height:100%;background:var(--groen-500);transition:width .3s}
+.timer{height:6px;background:var(--zand);border-radius:4px;overflow:hidden;margin-bottom:10px}
+.timer i{display:block;height:100%;background:var(--groen-500);transition:width .1s linear}
+.timer.krap i{background:var(--fout)}
+.tijd{font-weight:800;min-width:2.2em;text-align:right}
+.tijd.krap{color:var(--fout)}
+.meta{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.sterren{color:var(--geel);font-size:.85rem;letter-spacing:1px}
+.stam{font-weight:700;color:var(--groen-700);font-size:.95rem;margin:4px 0 0}
+@media (prefers-color-scheme: dark){.stam{color:var(--groen-300)}}
+.vraag{font-size:1.15rem;font-weight:650;line-height:1.4;margin:6px 0 4px;white-space:pre-line}
+.opties{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.optie{background:var(--kaart);border:2px solid var(--lijn);border-radius:14px;padding:13px 14px;text-align:left;display:flex;gap:12px;align-items:flex-start;font-size:1rem;line-height:1.35;transition:border-color .15s,background .15s,transform .1s;box-shadow:var(--schaduw)}
+.optie:active:not(:disabled){transform:scale(.985)}
+.optie .nr{flex:none;width:28px;height:28px;border-radius:8px;background:var(--groen-100);color:var(--groen-800);display:grid;place-items:center;font-weight:800;font-size:.9rem}
+@media (prefers-color-scheme: dark){.optie .nr{color:var(--groen-300)}}
+.optie.goed{border-color:var(--goed);background:var(--goed-bg);animation:pop .35s}
+.optie.goed .nr{background:var(--goed);color:#fff}
+.optie.fout{border-color:var(--fout);background:var(--fout-bg);animation:schud .35s}
+.optie.fout .nr{background:var(--fout);color:#fff}
+.optie.gekozen{border-color:var(--groen-500)}
+.optie.dim{opacity:.55}
+.banner{border-radius:14px;padding:12px 14px;font-weight:700;margin-top:14px;display:flex;gap:10px;align-items:center;animation:in .3s}
+.banner.goed{background:var(--goed-bg);color:var(--goed)}
+.banner.fout{background:var(--fout-bg);color:var(--fout)}
+.banner.half{background:var(--geel-bg);color:var(--geel)}
+.uitleg{margin-top:12px;display:flex;flex-direction:column;gap:10px;animation:in .3s}
+.uitleg div{background:var(--kaart);border-radius:14px;padding:12px 14px;box-shadow:var(--schaduw);font-size:.95rem}
+.uitleg b{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--zacht);margin-bottom:3px}
+.onder{position:sticky;bottom:0;padding:12px 0 calc(4px + env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--bg) 14px);margin-top:auto}
+.knop{width:100%;background:var(--groen-700);color:var(--knop-tekst);font-weight:800;font-size:1.05rem;padding:15px;border-radius:14px;box-shadow:0 3px 0 var(--groen-900)}
+.knop:active:not(:disabled){transform:translateY(2px);box-shadow:0 1px 0 var(--groen-900)}
+.knop:disabled{opacity:.45}
+.knop.tweede{background:var(--kaart);color:var(--tekst);box-shadow:var(--schaduw)}
+.knoppen{display:flex;flex-direction:column;gap:10px}
+
+/* Volgorde */
+.sectie-titel{font-size:.75rem;text-transform:uppercase;letter-spacing:.07em;color:var(--zacht);font-weight:700;margin:14px 0 6px}
+.slot{display:flex;gap:10px;align-items:center;border:2px dashed var(--lijn);border-radius:14px;padding:11px 12px;min-height:50px;color:var(--zacht)}
+.slot.vol{border-style:solid;border-color:var(--groen-500);background:var(--kaart);color:var(--tekst);box-shadow:var(--schaduw)}
+.slot .nr,.casus .nr{flex:none;width:28px;height:28px;border-radius:8px;background:var(--groen-800);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.9rem}
+.slot.goed{border-color:var(--goed);background:var(--goed-bg)}
+.slot.fout{border-color:var(--fout);background:var(--fout-bg)}
+.slot small{display:block;color:var(--zacht);font-size:.8rem}
+.kies{background:var(--kaart);border:2px solid var(--lijn);border-radius:14px;padding:12px 14px;text-align:left;box-shadow:var(--schaduw);font-size:1rem}
+.kies:active{transform:scale(.985)}
+
+/* Koppelen */
+.concepten{display:flex;flex-wrap:wrap;gap:8px}
+.concept{background:var(--kaart);border:2px solid var(--lijn);border-radius:12px;padding:9px 11px;font-weight:700;font-size:.95rem;display:flex;gap:8px;align-items:center;box-shadow:var(--schaduw);text-align:left}
+.concept.actief{border-color:var(--groen-500);background:var(--groen-100)}
+.concept .badge{min-width:24px;height:24px;border-radius:7px;display:grid;place-items:center;font-size:.8rem;background:var(--groen-800);color:#fff}
+.concept .badge.leeg{background:transparent;border:2px dashed var(--lijn)}
+.concept.goed{border-color:var(--goed);background:var(--goed-bg)}
+.concept.fout{border-color:var(--fout);background:var(--fout-bg)}
+.casus{background:var(--kaart);border:2px solid var(--lijn);border-radius:14px;padding:11px 12px;text-align:left;display:flex;gap:10px;align-items:flex-start;box-shadow:var(--schaduw);font-size:.95rem;line-height:1.35}
+.casus .nr{background:var(--aarde)}
+.casus.bezet{opacity:.6}
+.hint{font-size:.85rem;color:var(--zacht);margin-top:6px}
+
+/* Inzet */
+.inzetten{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.inzet{background:var(--groen-800);color:#fff;border-radius:14px;padding:16px 8px;font-weight:800;font-size:1.4rem;box-shadow:0 3px 0 var(--groen-900)}
+.inzet small{display:block;font-size:.75rem;font-weight:600;opacity:.85}
+
+/* Resultaat */
+.groot{font-size:3rem;font-weight:900;color:var(--groen-700);line-height:1}
+@media (prefers-color-scheme: dark){.groot{color:var(--groen-300)}}
+details.fout-item{background:var(--kaart);border-radius:14px;box-shadow:var(--schaduw);padding:12px 14px}
+details.fout-item summary{cursor:pointer;font-weight:600;list-style:none}
+details.fout-item summary::-webkit-details-marker{display:none}
+details.fout-item p{margin:.5em 0 0;font-size:.92rem}
+.goedtxt{color:var(--goed);font-weight:700}
+
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--groen-900);color:#fff;padding:10px 16px;border-radius:12px;font-weight:700;z-index:9;animation:in .3s}
+
+@keyframes pop{0%{transform:scale(.97)}60%{transform:scale(1.02)}100%{transform:scale(1)}}
+@keyframes schud{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script src="vragen.js"></script>
+<script>
+"use strict";
+/* =====================================================================
+   CE Quiz — oefen-app voor één speler (PWA, werkt offline)
+   Vragen komen uit vragen.js (gegenereerd door tools/genereer.py).
+   Voortgang wordt lokaal op dit apparaat bewaard (localStorage).
+   ===================================================================== */
+const D = window.CE_DATA;
+const Q = D.vragen;
+const QI = Object.fromEntries(Q.map(q => [q.id, q]));
+const OPSLAG = "ceq-v1";
+const XP_PER_NIVEAU = 300;
+
+/* ---------- helpers ---------- */
+const $app = document.getElementById("app");
+function el(tag, props, ...kids){
+  const n = document.createElement(tag);
+  for (const [k,v] of Object.entries(props || {})){
+    if (k === "class") n.className = v;
+    else if (k === "style") n.style.cssText = v;
+    else if (k.startsWith("on")) n.addEventListener(k.slice(2), v);
+    else if (v === true) n.setAttribute(k, "");
+    else if (v !== false && v != null) n.setAttribute(k, v);
+  }
+  for (const c of kids.flat()){ if (c == null || c === false) continue; n.append(c instanceof Node ? c : document.createTextNode(String(c))); }
+  return n;
+}
+const hussel = a => { a = a.slice(); for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+const husselAnders = n => { let a; do { a = hussel([...Array(n).keys()]); } while (n > 1 && a.every((v,i)=>v===i)); return a; };
+const vandaag = () => new Date().toISOString().slice(0,10);
+function tril(ms){ try{ navigator.vibrate && navigator.vibrate(ms); }catch(e){} }
+function toast(t){ const x = el("div",{class:"toast"},t); document.body.append(x); setTimeout(()=>x.remove(),2200); }
+
+/* ---------- voortgang ---------- */
+function laad(){
+  try { const p = JSON.parse(localStorage.getItem(OPSLAG)); if (p && p.pv) return p; } catch(e){}
+  return { pv:{}, fouten:[], xp:0, best:0, streak:{ dag:null, n:0 }, sessies:0 };
+}
+let P = laad();
+function bewaar(){ try { localStorage.setItem(OPSLAG, JSON.stringify(P)); } catch(e){} }
+function registreer(q, goed){
+  const r = P.pv[q.id] || [0,0,0];
+  r[goed ? 0 : 1]++; r[2] = Date.now(); P.pv[q.id] = r;
+  const i = P.fouten.indexOf(q.id);
+  if (!goed && i < 0) P.fouten.push(q.id);
+  if (goed && i >= 0) P.fouten.splice(i, 1);
+}
+function updateStreak(){
+  const d = vandaag(); if (P.streak.dag === d) return;
+  const gister = new Date(Date.now() - 864e5).toISOString().slice(0,10);
+  P.streak.n = P.streak.dag === gister ? P.streak.n + 1 : 1; P.streak.dag = d;
+}
+function streakNu(){
+  const gister = new Date(Date.now() - 864e5).toISOString().slice(0,10);
+  return (P.streak.dag === vandaag() || P.streak.dag === gister) ? P.streak.n : 0;
+}
+function statistiek(lijst = Q){
+  let gezien = 0, g = 0, f = 0;
+  for (const q of lijst){ const r = P.pv[q.id]; if (r){ gezien++; g += r[0]; f += r[1]; } }
+  return { gezien, totaal:lijst.length, pct: g+f ? Math.round(g/(g+f)*100) : 0 };
+}
+
+/* Kiest n vragen: eerst nooit geziene, dan vaker fout dan goed, dan de rest */
+function prioriteit(q){
+  const r = P.pv[q.id];
+  if (!r) return Math.random();
+  const [g,f] = r;
+  return (f >= g ? 1 : 2 + Math.min(g,4)*.4) + Math.random()*.8;
+}
+function kies(pool, n){ return pool.map(q => [prioriteit(q), q]).sort((a,b) => a[0]-b[0]).slice(0, n).map(x => x[1]); }
+const pool = (filter) => Q.filter(filter);
+
+/* ---------- sessies ---------- */
+/* Een sessie is een lijst stappen: {q, ronde, tijd, punten, ...}. Modi: snel, onderwerp, fouten, examen, uitdaging */
+let S = null;
+const UITDAGING = [
+  { titel:"Sprint", ico:"⚡", uitleg:"6 begripsvragen · +100 per goed antwoord.", n:6, filter:q => q.t==="mc" && q.niv===1, punten:100 },
+  { titel:"Casus", ico:"🔍", uitleg:"6 casusvragen · +150 goed, −50 fout.", n:6, filter:q => q.t==="mc" && q.niv===2, punten:150, minpunten:50 },
+  { titel:"Volgorde", ico:"🔢", uitleg:"3 vragen · 50 punten per stap op de goede plek.", n:3, filter:q => q.t==="volgorde", perDeel:50 },
+  { titel:"Koppelen", ico:"🔗", uitleg:"3 vragen · 50 punten per juiste koppeling.", n:3, filter:q => q.t==="koppelen", perDeel:50 },
+  { titel:"Finale", ico:"🏆", uitleg:"4 integrale casussen · kies vooraf je inzet: goed = erbij, fout = eraf.", n:4, filter:q => q.t==="mc" && q.niv===3, inzet:true },
+];
+
+function startSessie(modus, opt = {}){
+  let stappen = [];
+  if (modus === "snel"){
+    const mc = kies(pool(q => q.t==="mc"), 8), v = kies(pool(q => q.t==="volgorde"), 1), k = kies(pool(q => q.t==="koppelen"), 1);
+    stappen = hussel([...mc, ...v, ...k]).map(q => ({ q }));
+  } else if (modus === "onderwerp"){
+    stappen = kies(pool(q => q.cat === opt.cat), 10).map(q => ({ q }));
+  } else if (modus === "fouten"){
+    stappen = kies(P.fouten.map(id => QI[id]).filter(Boolean), 10).map(q => ({ q }));
+  } else if (modus === "examen"){
+    const mc = kies(pool(q => q.t==="mc"), 34), v = kies(pool(q => q.t==="volgorde"), 3), k = kies(pool(q => q.t==="koppelen"), 3);
+    stappen = hussel([...mc, ...v, ...k]).map(q => ({ q }));
+  } else if (modus === "uitdaging"){
+    UITDAGING.forEach((r, ri) => kies(pool(r.filter), r.n).forEach(q => stappen.push({ q, ronde:ri })));
+  }
+  if (!stappen.length){ toast("Geen vragen beschikbaar"); return; }
+  S = { modus, opt, stappen, i:0, score:0, goed:0, xp:0, log:[], feedback: modus !== "examen", introGezien:-1 };
+  volgendeStap(true);
+}
+
+function volgendeStap(eerste){
+  stopTimer();
+  if (!eerste) S.i++;
+  if (S.i >= S.stappen.length) return eindeSessie();
+  const st = S.stappen[S.i];
+  if (S.modus === "uitdaging" && st.ronde !== S.introGezien){ S.introGezien = st.ronde; return render(schermRondeIntro); }
+  bereidVraag(st);
+  render(schermVraag);
+}
+
+function bereidVraag(st){
+  const q = st.q;
+  st.a = { klaar:false };
+  if (q.t === "mc") st.a.perm = hussel([...q.o.keys()]);
+  if (q.t === "volgorde") { st.a.rest = husselAnders(q.items.length); st.a.gekozen = []; }
+  if (q.t === "koppelen") { st.a.casus = husselAnders(q.paren.length); st.a.koppeling = q.paren.map(()=>null); st.a.sel = 0; }
+  const r = rondeVan(st);
+  if (r && r.inzet) st.a.inzetFase = true;   // geen timer: je hebt alle tijd
+}
+const rondeVan = st => S.modus === "uitdaging" ? UITDAGING[st.ronde] : null;
+
+/* ---------- antwoorden ---------- */
+function antwoordMC(st, idx){
+  if (st.a.klaar) return;
+  stopTimer();
+  st.a.klaar = true; st.a.gekozen = idx;
+  const goed = idx === st.q.c;
+  verwerk(st, goed, goed ? 1 : 0);
+}
+function controleerVolgorde(st){
+  if (st.a.klaar) return;
+  stopTimer();
+  const vol = [...st.a.gekozen, ...st.a.rest];     // niet-geplaatste items achteraan
+  st.a.resultaat = vol;
+  st.a.klaar = true;
+  const n = vol.filter((v,i) => v === i).length;
+  verwerk(st, n === vol.length, n / vol.length, n);
+}
+function controleerKoppel(st){
+  if (st.a.klaar) return;
+  stopTimer();
+  st.a.klaar = true; st.a.sel = null;
+  const n = st.a.koppeling.filter((k,i) => k === i).length;
+  verwerk(st, n === st.a.koppeling.length, n / st.a.koppeling.length, n);
+}
+function tijdOp(st){
+  if (st.a.klaar) return;
+  st.a.tijdOp = true;
+  if (st.q.t === "mc") antwoordMC(st, null);
+  else if (st.q.t === "volgorde") controleerVolgorde(st);
+  else controleerKoppel(st);
+}
+/* fractie = deel goed (voor volgorde/koppelen), n = aantal goede delen */
+function verwerk(st, goed, fractie, n){
+  registreer(st.q, goed);
+  if (goed) S.goed++;
+  const xp = Math.round((st.q.niv || 1) * 10 * fractie);
+  S.xp += xp;
+  const r = rondeVan(st);
+  let delta = 0;
+  if (r){
+    if (r.inzet) delta = goed ? st.a.inzet : -st.a.inzet;
+    else if (r.perDeel) delta = n * r.perDeel;
+    else delta = goed ? r.punten : -(r.minpunten || 0);
+    const oud = S.score; S.score = Math.max(0, S.score + delta); delta = S.score - oud;
+  }
+  st.a.delta = delta; st.a.goed = goed; st.a.fractie = fractie;
+  S.log.push({ id:st.q.id, goed, fractie });
+  if (!goed) tril(40);
+  if (!S.feedback) return volgendeStap();
+  render(schermVraag);
+}
+
+function eindeSessie(){
+  stopTimer();
+  P.xp += S.xp; P.sessies++;
+  updateStreak();
+  S.nieuwRecord = S.modus === "uitdaging" && S.score > P.best;
+  if (S.nieuwRecord) P.best = S.score;
+  bewaar();
+  render(schermResultaat);
+}
+function stopSessie(){
+  if (!confirm("Stoppen? Je antwoorden tot nu toe blijven bewaard.")) return;
+  stopTimer(); P.xp += S.xp; bewaar(); S = null; render(schermHome);
+}
+
+/* ---------- timer ---------- */
+const T = { id:null, rest:0, totaal:0, einde:null, vorige:0 };
+function startTimer(sec, einde){
+  stopTimer(); T.totaal = T.rest = sec*1000; T.einde = einde; T.vorige = performance.now();
+  T.id = setInterval(() => {
+    const nu = performance.now(); if (!document.hidden) T.rest -= nu - T.vorige; T.vorige = nu;
+    if (T.rest <= 0){ T.rest = 0; const f = T.einde; stopTimer(); tekenTimer(); f && f(); } else tekenTimer();
+  }, 100);
+}
+function stopTimer(){ clearInterval(T.id); T.id = null; }
+function tekenTimer(){
+  const b = document.getElementById("timer-vul"), t = document.getElementById("timer-tijd");
+  if (!b) return;
+  const krap = T.rest <= Math.min(5000, T.totaal * .3);
+  b.style.width = (T.totaal ? T.rest / T.totaal * 100 : 0) + "%";
+  b.parentElement.classList.toggle("krap", krap);
+  if (t){ t.textContent = Math.ceil(T.rest/1000) + "s"; t.classList.toggle("krap", krap); }
+}
+
+/* ---------- render ---------- */
+let huidigScherm = null;
+function render(fn){
+  huidigScherm = fn;
+  $app.innerHTML = "";
+  $app.append(fn());
+  tekenTimer();
+}
+
+/* ===== Home ===== */
+let installPrompt = null;
+window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installPrompt = e; if (huidigScherm === schermHome) render(schermHome); });
+const isStandalone = () => window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent);
+
+function schermHome(){
+  const st = statistiek(), niv = Math.floor(P.xp / XP_PER_NIVEAU) + 1, pNiv = Math.round((P.xp % XP_PER_NIVEAU) / XP_PER_NIVEAU * 100);
+  const streak = streakNu();
+  let install = null;
+  if (!isStandalone()){
+    if (installPrompt) install = el("div",{class:"installeer"},"📲 Zet CE Quiz als app op je telefoon.",
+      el("button",{onclick: async () => { installPrompt.prompt(); await installPrompt.userChoice; installPrompt = null; render(schermHome); }},"Installeer"));
+    else if (isIOS()) install = el("div",{class:"installeer"},"📲 Installeren: tik op ",el("b",{},"Deel")," en kies ",el("b",{},"Zet op beginscherm"),".");
+  }
+  return el("div",{class:"scherm stack"},
+    el("div",{class:"kop"}, el("div",{class:"logo"},"♻️"), el("h1",{},"CE Quiz"),
+      el("div",{class:"rechts"}, el("span",{class:"pil",title:"Dagen op rij"}, `🔥 ${streak}`))),
+    install,
+    el("div",{class:"kaart"},
+      el("div",{class:"niveau"},
+        el("div",{class:"niveau-cirkel",style:`--p:${pNiv}`}, el("span",{},niv)),
+        el("div",{}, el("b",{},`Niveau ${niv}`), el("div",{class:"zacht klein"},`${P.xp % XP_PER_NIVEAU} / ${XP_PER_NIVEAU} XP naar niveau ${niv+1}`))),
+      el("div",{class:"stats"},
+        el("div",{}, el("b",{},`${st.gezien}`), el("small",{},`van ${st.totaal} gezien`)),
+        el("div",{}, el("b",{},`${st.pct}%`), el("small",{},"goed beantwoord")),
+        el("div",{}, el("b",{},P.best), el("small",{},"record uitdaging")))),
+    el("div",{class:"tegels"},
+      el("button",{class:"tegel hoofd",onclick:() => startSessie("snel")},
+        el("span",{class:"ico"},"⚡"), el("span",{}, el("b",{},"Snelle ronde"), el("br"), el("small",{},"10 vragen · nieuwe vragen eerst"))),
+      el("button",{class:"tegel",onclick:() => render(schermUitdagingInfo)}, el("span",{class:"ico"},"🏆"), el("b",{},"Uitdaging"), el("small",{},"5 rondes met punten en inzet")),
+      el("button",{class:"tegel",onclick:() => render(schermOnderwerpen)}, el("span",{class:"ico"},"📚"), el("b",{},"Per onderwerp"), el("small",{},`${D.categorieen.length} onderwerpen`)),
+      el("button",{class:"tegel",disabled:!P.fouten.length,onclick:() => startSessie("fouten")}, el("span",{class:"ico"},"🔁"), el("b",{},"Fouten herhalen"), el("small",{}, P.fouten.length ? `${P.fouten.length} vragen om te herhalen` : "nog geen fouten")),
+      el("button",{class:"tegel",onclick:() => startSessie("examen")}, el("span",{class:"ico"},"🎓"), el("b",{},"Oefenexamen"), el("small",{},"40 vragen · uitleg pas aan het eind"))),
+    el("p",{class:"zacht klein",style:"text-align:center;margin-top:8px"},
+      `${Q.length} vragen over systeemdenken, circulariteit, rapportage en business ethics. Je voortgang staat alleen op dit apparaat.`),
+    el("button",{class:"zacht klein",style:"text-decoration:underline;margin:0 auto",onclick:() => {
+      if (confirm("Alle voortgang (XP, statistieken en fouten) wissen?")){ localStorage.removeItem(OPSLAG); P = laad(); render(schermHome); }
+    }},"Voortgang wissen")
+  );
+}
+
+function schermOnderwerpen(){
+  return el("div",{class:"scherm stack"},
+    el("div",{class:"kop"}, el("button",{class:"icoonknop",onclick:() => render(schermHome),"aria-label":"Terug"},"←"), el("h1",{},"Per onderwerp")),
+    D.categorieen.map(cat => {
+      const lijst = pool(q => q.cat === cat), st = statistiek(lijst);
+      return el("button",{class:"kaart onderwerp",onclick:() => startSessie("onderwerp",{cat})},
+        el("div",{class:"r"}, el("b",{},cat), el("span",{class:"zacht klein"}, `${st.gezien}/${st.totaal}`)),
+        el("div",{class:"balk"}, el("i",{style:`width:${st.gezien/st.totaal*100}%`})),
+        el("span",{class:"zacht klein"}, st.gezien ? `${st.pct}% goed` : "nog niet geoefend"));
+    }));
+}
+
+function schermUitdagingInfo(){
+  return el("div",{class:"scherm stack"},
+    el("div",{class:"kop"}, el("button",{class:"icoonknop",onclick:() => render(schermHome),"aria-label":"Terug"},"←"), el("h1",{},"Uitdaging")),
+    el("div",{class:"kaart"}, el("p",{style:"margin:0"},"Vijf rondes, net als de klassikale battle — maar dan tegen jezelf. Haal je record: ", el("b",{},P.best), " punten.")),
+    UITDAGING.map((r,i) => el("div",{class:"kaart"}, el("span",{class:"label"},`Ronde ${i+1}`), el("h2",{},`${r.ico} ${r.titel}`), el("div",{class:"zacht"}, r.uitleg))),
+    el("div",{class:"onder"}, el("button",{class:"knop",onclick:() => startSessie("uitdaging")},"Start uitdaging"))
+  );
+}
+
+function schermRondeIntro(){
+  const ri = S.stappen[S.i].ronde, r = UITDAGING[ri];
+  return el("div",{class:"scherm stack",style:"justify-content:center"},
+    el("div",{class:"kaart",style:"text-align:center"},
+      el("span",{class:"label"},`Ronde ${ri+1} van 5`),
+      el("div",{style:"font-size:3rem;margin:10px 0"}, r.ico),
+      el("h2",{}, r.titel),
+      el("p",{class:"zacht"}, r.uitleg),
+      el("p",{}, "Score tot nu toe: ", el("b",{}, S.score))),
+    el("div",{class:"onder"}, el("button",{class:"knop",onclick:() => { bereidVraag(S.stappen[S.i]); render(schermVraag); }},"Start ronde"))
+  );
+}
+
+/* ===== Vraagscherm ===== */
+function schermVraag(){
+  const st = S.stappen[S.i], q = st.q, r = rondeVan(st), a = st.a;
+  const scherm = el("div",{class:"scherm"});
+  scherm.append(el("div",{class:"quizkop"},
+    el("button",{class:"icoonknop",onclick:stopSessie,"aria-label":"Stoppen"},"✕"),
+    el("div",{class:"voortgang"}, el("i",{style:`width:${(S.i + (a.klaar?1:0)) / S.stappen.length * 100}%`})),
+    S.modus === "uitdaging" ? el("span",{class:"pil"}, `${S.score}`) : el("span",{class:"pil"}, `${S.i+1}/${S.stappen.length}`),
+    null));
+
+  scherm.append(el("div",{class:"meta"}, el("span",{class:"label"}, q.cat), el("span",{class:"sterren",title:"Moeilijkheid"}, "★".repeat(q.niv) + "☆".repeat(3-q.niv)),
+    r ? el("span",{class:"zacht klein"}, `· ${r.titel}`) : null));
+
+  /* Finale: eerst inzet kiezen */
+  if (a.inzetFase){
+    const opties = [...new Set([100, 250, 500, S.score])].filter(v => v > 0 && v <= S.score).sort((x,y) => x-y);
+    if (!opties.length) opties.push(0);
+    scherm.append(el("div",{class:"kaart"},
+      el("h2",{},"Hoeveel zet je in?"),
+      el("p",{class:"zacht",style:"margin:0"},"Je ziet de vraag pas na het kiezen. Goed = inzet erbij, fout = inzet eraf. Je score: ", el("b",{},S.score)),
+      el("div",{class:"inzetten"}, opties.map(v => el("button",{class:"inzet",onclick:() => {
+        a.inzet = v; a.inzetFase = false; render(schermVraag); }},
+        v, el("small",{}, v === 0 ? "geen punten" : v === S.score ? "alles" : "punten"))))));
+    return scherm;
+  }
+
+  if (q.s) scherm.append(el("p",{class:"stam"}, q.s));
+  scherm.append(el("div",{class:"vraag"}, q.v));
+  if (r && r.inzet) scherm.append(el("div",{class:"zacht klein"}, `Inzet: ${a.inzet} punten`));
+
+  if (q.t === "mc") scherm.append(viewMC(st));
+  else if (q.t === "volgorde") scherm.append(viewVolgorde(st));
+  else scherm.append(viewKoppel(st));
+
+  if (a.klaar && S.feedback){
+    scherm.append(viewBanner(st));
+    scherm.append(viewUitleg(q));
+    scherm.append(el("div",{class:"onder"}, el("button",{class:"knop",id:"volgende",onclick:() => volgendeStap()}, S.i === S.stappen.length - 1 ? "Bekijk resultaat" : "Volgende")));
+    setTimeout(() => { const b = document.getElementById("volgende"); b && b.scrollIntoView({ behavior:"smooth", block:"nearest" }); }, 50);
+  }
+  return scherm;
+}
+
+function viewMC(st){
+  const q = st.q, a = st.a;
+  return el("div",{class:"opties"}, a.perm.map((idx, pos) => {
+    let cls = "optie";
+    if (a.klaar && S.feedback){
+      if (idx === q.c) cls += " goed"; else if (idx === a.gekozen) cls += " fout"; else cls += " dim";
+    }
+    return el("button",{class:cls,disabled:a.klaar,onclick:() => antwoordMC(st, idx)},
+      el("span",{class:"nr"}, "ABCD"[pos]), el("span",{}, q.o[idx]));
+  }));
+}
+
+function viewVolgorde(st){
+  const q = st.q, a = st.a, wrap = el("div",{});
+  if (!a.klaar){
+    wrap.append(el("div",{class:"sectie-titel"},"Jouw volgorde"));
+    const slots = el("div",{class:"stack",style:"gap:8px"});
+    for (let p = 0; p < q.items.length; p++){
+      const it = a.gekozen[p];
+      slots.append(it === undefined
+        ? el("div",{class:"slot"}, el("span",{class:"nr",style:"background:var(--zand);color:var(--zacht)"}, p+1), "Tik hieronder een stap")
+        : el("button",{class:"slot vol",onclick:() => { a.gekozen.splice(p,1); a.rest.push(it); render(schermVraag); }},
+            el("span",{class:"nr"}, p+1), el("span",{style:"flex:1;text-align:left"}, q.items[it]), el("span",{class:"zacht"},"✕")));
+    }
+    wrap.append(slots);
+    if (a.rest.length){
+      wrap.append(el("div",{class:"sectie-titel"},"Kies de volgende stap"));
+      wrap.append(el("div",{class:"stack",style:"gap:8px"}, a.rest.map((it, k) =>
+        el("button",{class:"kies",onclick:() => { a.rest.splice(k,1); a.gekozen.push(it); render(schermVraag); }}, q.items[it]))));
+    }
+    wrap.append(el("div",{class:"onder"}, el("button",{class:"knop",disabled:a.rest.length > 0,onclick:() => controleerVolgorde(st)},"Controleer")));
+  } else {
+    wrap.append(el("div",{class:"sectie-titel"}, S.feedback ? "Resultaat" : "Ingevuld"));
+    wrap.append(el("div",{class:"stack",style:"gap:8px"}, a.resultaat.map((it, p) =>
+      el("div",{class:"slot vol " + (S.feedback ? (it === p ? "goed" : "fout") : "")},
+        el("span",{class:"nr"}, p+1),
+        el("span",{style:"flex:1"}, q.items[it], S.feedback && it !== p ? el("small",{}, `hoort op plek ${it+1}`) : null),
+        S.feedback ? (it === p ? "✔" : "✖") : null))));
+  }
+  return wrap;
+}
+
+function viewKoppel(st){
+  const q = st.q, a = st.a, wrap = el("div",{});
+  const nummer = c => a.casus.indexOf(c) + 1;
+  wrap.append(el("div",{class:"sectie-titel"}, a.klaar ? "Begrippen" : "1. Tik een begrip"));
+  wrap.append(el("div",{class:"concepten"}, q.paren.map((p, i) => {
+    const k = a.koppeling[i];
+    let cls = "concept";
+    if (!a.klaar && a.sel === i) cls += " actief";
+    if (a.klaar && S.feedback) cls += k === i ? " goed" : " fout";
+    return el("button",{class:cls,disabled:a.klaar,onclick:() => { a.sel = i; render(schermVraag); }},
+      el("span",{class:"badge" + (k === null ? " leeg" : "")}, k === null ? "" : nummer(k)), p[0],
+      a.klaar && S.feedback && k !== i ? el("span",{class:"zacht klein"}, `→ ${nummer(i)}`) : null);
+  })));
+  wrap.append(el("div",{class:"sectie-titel"}, a.klaar ? "Situaties" : "2. Tik de situatie die erbij hoort"));
+  wrap.append(el("div",{class:"stack",style:"gap:8px"}, a.casus.map((c, pos) =>
+    el("button",{class:"casus" + (a.koppeling.includes(c) && !a.klaar ? " bezet" : ""),disabled:a.klaar,onclick:() => {
+      if (a.sel === null) a.sel = a.koppeling.findIndex(k => k === null);
+      if (a.sel < 0) return;
+      a.koppeling = a.koppeling.map(k => k === c ? null : k);
+      a.koppeling[a.sel] = c;
+      const vrij = a.koppeling.findIndex(k => k === null);
+      a.sel = vrij >= 0 ? vrij : null;
+      render(schermVraag);
+    }}, el("span",{class:"nr"}, pos+1), el("span",{}, q.paren[c][1])))));
+  if (!a.klaar){
+    wrap.append(el("div",{class:"onder"}, el("button",{class:"knop",disabled:a.koppeling.includes(null),onclick:() => controleerKoppel(st)},"Controleer")));
+  }
+  return wrap;
+}
+
+function viewBanner(st){
+  const a = st.a, r = rondeVan(st);
+  const pt = r ? (a.delta > 0 ? ` +${a.delta}` : a.delta < 0 ? ` ${a.delta}` : "") : "";
+  if (a.goed) return el("div",{class:"banner goed"}, `✔ Goed!${pt}`);
+  if (a.fractie > 0) return el("div",{class:"banner half"}, `◐ ${Math.round(a.fractie*4)} van 4 goed${pt}`);
+  return el("div",{class:"banner fout"}, (a.tijdOp ? "⏱ Tijd is om" : "✖ Helaas") + pt);
+}
+
+function viewUitleg(q){
+  const u = q.u;
+  return el("div",{class:"uitleg"},
+    el("div",{}, el("b",{},"✔ Waarom dit klopt"), u.goed),
+    u.concept ? el("div",{}, el("b",{},"📘 Begrip"), u.concept) : null,
+    u.afleider ? el("div",{}, el("b",{},"✖ Waarom niet de andere opties"), u.afleider) : null,
+    u.systeem ? el("div",{}, el("b",{},"🔄 Systeemblik"), u.systeem) : null);
+}
+
+/* ===== Resultaat ===== */
+function juisteAntwoord(q){
+  if (q.t === "mc") return q.o[q.c];
+  if (q.t === "volgorde") return q.items.map((x,i) => `${i+1}. ${x}`).join("  →  ");
+  return q.paren.map(p => `${p[0]} → ${p[1]}`).join("  ·  ");
+}
+function schermResultaat(){
+  const n = S.stappen.length, pct = Math.round(S.goed / n * 100);
+  const fout = S.log.filter(l => !l.goed).map(l => QI[l.id]);
+  const titel = { snel:"Snelle ronde", onderwerp:S.opt.cat, fouten:"Fouten herhalen", examen:"Oefenexamen", uitdaging:"Uitdaging" }[S.modus];
+  const oordeel = pct >= 90 ? "Uitstekend! 🌱" : pct >= 70 ? "Goed gedaan!" : pct >= 55 ? "Voldoende — blijf oefenen." : "Nog even oefenen.";
+  return el("div",{class:"scherm stack"},
+    el("div",{class:"kaart",style:"text-align:center"},
+      el("span",{class:"label"}, titel),
+      S.modus === "uitdaging"
+        ? [el("div",{class:"groot",style:"margin-top:12px"}, S.score), el("div",{class:"zacht"}, S.nieuwRecord ? "🎉 Nieuw record!" : `Record: ${P.best}`)]
+        : [el("div",{class:"groot",style:"margin-top:12px"}, `${pct}%`), el("div",{class:"zacht"}, oordeel)],
+      el("p",{}, `${S.goed} van ${n} helemaal goed · +${S.xp} XP`)),
+    fout.length ? el("div",{class:"sectie-titel"}, `Bekijk je fouten (${fout.length})`) : el("p",{class:"zacht",style:"text-align:center"},"Geen fouten — knap!"),
+    fout.map(q => el("details",{class:"fout-item"},
+      el("summary",{}, q.s && q.t === "mc" && q.id.startsWith("d-") ? q.v.slice(0, 110) + "…" : q.v.length > 140 ? q.v.slice(0,140) + "…" : q.v),
+      el("p",{}, el("span",{class:"goedtxt"},"Juist: "), juisteAntwoord(q)),
+      el("p",{class:"zacht"}, q.u.goed))),
+    el("div",{class:"onder knoppen"},
+      el("button",{class:"knop",onclick:() => startSessie(S.modus, S.opt)}, "Nog een keer"),
+      el("button",{class:"knop tweede",onclick:() => { S = null; render(schermHome); }}, "Naar start"))
+  );
+}
+
+/* ---------- toetsenbord (desktop) ---------- */
+document.addEventListener("keydown", e => {
+  if (!S || huidigScherm !== schermVraag) return;
+  const st = S.stappen[S.i];
+  if (st.q.t === "mc" && !st.a.klaar && !st.a.inzetFase){
+    const pos = "abcd1234".indexOf(e.key.toLowerCase()) % 4;
+    if (pos >= 0 && st.a.perm[pos] !== undefined && "abcd1234".includes(e.key.toLowerCase())) antwoordMC(st, st.a.perm[pos]);
+  }
+  if ((e.key === "Enter" || e.key === "ArrowRight") && st.a.klaar && S.feedback){ e.preventDefault(); volgendeStap(); }
+});
+
+/* ---------- start ---------- */
+render(schermHome);
+if ("serviceWorker" in navigator && location.protocol !== "file:"){
+  navigator.serviceWorker.register("sw.js").catch(() => {});
+}
+</script>
+</body>
+</html>
