@@ -45,7 +45,7 @@ dict(id="ijsberg", naam="IJsbergmodel", cat=CAT,
 dict(id="mentaal", naam="Mentale modellen", cat=CAT,
   kort="diepe aannames en overtuigingen die gedrag en structuren sturen",
   df="De diepgewortelde aannames, overtuigingen en waarden waarmee mensen de werkelijkheid interpreteren en die bepalen welke structuren zij als normaal beschouwen.",
-  verwar=["b_rechtv", "kudde", "padafh", "attitude"],
+  verwar=["b_herdef", "kudde", "padafh", "attitude"],
   casus=[
    "Een bestuurder vindt het vanzelfsprekend dat economische groei altijd voorop staat en ziet natuurbescherming daarom automatisch als kostenpost.",
    "Veel boeren en beleidsmakers gaan er onbewust van uit dat een hogere productie per hectare per definitie vooruitgang is.",

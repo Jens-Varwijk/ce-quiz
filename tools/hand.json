@@ -100,17 +100,17 @@
   "categorie": "Morele ontkoppeling",
   "vraag": "Een medewerker zegt: ‘Ik voer alleen uit wat het management besluit, dus de lozing is niet mijn verantwoordelijkheid.’ Welk mechanisme van Bandura is dit?",
   "opties": [
-   "Verplaatsing van verantwoordelijkheid",
-   "Diffusie van verantwoordelijkheid",
-   "Eufemistisch taalgebruik",
-   "Gunstige vergelijking"
+   "Verschuiven of verdunnen van verantwoordelijkheid",
+   "Herdefiniëren van gedrag",
+   "Minimaliseren van gevolgen",
+   "Normalisatie van afwijkend gedrag"
   ],
   "correct": 0,
   "uitleg": {
-   "goed": "De verantwoordelijkheid wordt naar een autoriteit (het management) geschoven.",
-   "concept": "Morele ontkoppeling (Bandura): displacement of responsibility.",
-   "afleider": "Diffusie lijkt erop, maar verspreidt de schuld over een groep (‘iedereen doet het’), niet naar een hogere autoriteit.",
-   "systeem": "Hiërarchische structuren maken deze ontkoppeling makkelijker."
+   "goed": "De medewerker legt de verantwoordelijkheid bij een ander (het management): ‘die maakt de morele afweging, niet ik’.",
+   "concept": "Morele ontkoppeling (Bandura): verschuiven of verdunnen van verantwoordelijkheid.",
+   "afleider": "Herdefiniëren geeft het gedrag een andere betekenis (‘strategisch noodzakelijk’); minimaliseren maakt de schade kleiner; normalisatie betekent dat de praktijk zo gewoon is geworden dat niemand haar nog ziet.",
+   "systeem": "Lange beslisketens en hiërarchie maken deze ontkoppeling makkelijker."
   }
  },
  {
@@ -823,26 +823,26 @@
   "vraag": "Koppel elk mechanisme aan de juiste uitspraak.",
   "paren": [
    [
-    "Morele rechtvaardiging",
+    "Herdefiniëren van gedrag",
     "‘We kappen dit bos, maar zo creëren we banen in een arme regio.’"
    ],
    [
-    "Eufemistisch taalgebruik",
-    "‘Er is sprake van een tijdelijke afwijking in de lozingswaarden.’"
-   ],
-   [
-    "Gunstige vergelijking",
+    "Minimaliseren van gevolgen",
     "‘Vergeleken met onze concurrenten stoten wij nauwelijks uit.’"
    ],
    [
-    "Verplaatsing van verantwoordelijkheid",
+    "Verschuiven of verdunnen van verantwoordelijkheid",
     "‘De directie heeft dit zo besloten, ik voer alleen uit.’"
+   ],
+   [
+    "Normalisatie van afwijkend gedrag",
+    "‘Zo lozen we hier al twintig jaar; niemand kijkt er nog van op.’"
    ]
   ],
   "uitleg": {
-   "goed": "Volgens Bandura kunnen mensen schadelijk gedrag moreel ‘uitschakelen’ zonder hun normen los te laten.",
-   "concept": "Morele ontkoppeling (Bandura).",
-   "afleider": "Rechtvaardiging en gunstige vergelijking lijken op elkaar: rechtvaardiging beroept zich op een hoger doel, vergelijking op ‘anderen zijn erger’."
+   "goed": "Volgens Bandura schakelen mensen hun morele normen selectief uit: niet het gedrag verandert, maar het verhaal erover.",
+   "concept": "Morele ontkoppeling (Bandura), zoals behandeld in de e-learning Business Ethics.",
+   "afleider": "Vergelijken met ergere anderen valt onder minimaliseren van gevolgen, niet onder herdefiniëren: de schade wordt kleiner gemaakt."
   }
  },
  {

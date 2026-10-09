@@ -154,6 +154,13 @@ details.fout-item summary::-webkit-details-marker{display:none}
 details.fout-item p{margin:.5em 0 0;font-size:.92rem}
 .goedtxt{color:var(--goed);font-weight:700}
 
+.bron{font-size:.8rem;color:var(--zacht);margin-top:8px;line-height:1.35}
+.bron.extra{color:var(--geel)}
+.schakel{display:flex;align-items:center;gap:12px;width:100%;text-align:left}
+.schakel .knopje{flex:none;width:48px;height:28px;border-radius:999px;background:var(--zand);position:relative;transition:background .2s}
+.schakel .knopje::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:left .2s}
+.schakel.aan .knopje{background:var(--groen-500)}
+.schakel.aan .knopje::after{left:23px}
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--groen-900);color:#fff;padding:10px 16px;border-radius:12px;font-weight:700;z-index:9;animation:in .3s}
 
 @keyframes pop{0%{transform:scale(.97)}60%{transform:scale(1.02)}100%{transform:scale(1)}}
@@ -221,7 +228,7 @@ function streakNu(){
   const gister = new Date(Date.now() - 864e5).toISOString().slice(0,10);
   return (P.streak.dag === vandaag() || P.streak.dag === gister) ? P.streak.n : 0;
 }
-function statistiek(lijst = Q){
+function statistiek(lijst = Q.filter(telt)){
   let gezien = 0, g = 0, f = 0;
   for (const q of lijst){ const r = P.pv[q.id]; if (r){ gezien++; g += r[0]; f += r[1]; } }
   return { gezien, totaal:lijst.length, pct: g+f ? Math.round(g/(g+f)*100) : 0 };
@@ -235,7 +242,10 @@ function prioriteit(q){
   return (f >= g ? 1 : 2 + Math.min(g,4)*.4) + Math.random()*.8;
 }
 function kies(pool, n){ return pool.map(q => [prioriteit(q), q]).sort((a,b) => a[0]-b[0]).slice(0, n).map(x => x[1]); }
-const pool = (filter) => Q.filter(filter);
+const alleenEL = () => P.alleenEL !== false;          // standaard: alleen stof uit de e-learnings
+const telt = q => !alleenEL() || q.b.el;
+const pool = (filter) => Q.filter(q => filter(q) && telt(q));
+const foutenLijst = () => P.fouten.map(id => QI[id]).filter(q => q && telt(q));
 
 /* ---------- sessies ---------- */
 /* Een sessie is een lijst stappen: {q, ronde, tijd, punten, ...}. Modi: snel, onderwerp, fouten, examen, uitdaging */
@@ -256,7 +266,7 @@ function startSessie(modus, opt = {}){
   } else if (modus === "onderwerp"){
     stappen = kies(pool(q => q.cat === opt.cat), 10).map(q => ({ q }));
   } else if (modus === "fouten"){
-    stappen = kies(P.fouten.map(id => QI[id]).filter(Boolean), 10).map(q => ({ q }));
+    stappen = kies(foutenLijst(), 10).map(q => ({ q }));
   } else if (modus === "examen"){
     const mc = kies(pool(q => q.t==="mc"), 34), v = kies(pool(q => q.t==="volgorde"), 3), k = kies(pool(q => q.t==="koppelen"), 3);
     stappen = hussel([...mc, ...v, ...k]).map(q => ({ q }));
@@ -402,6 +412,10 @@ function schermHome(){
     el("div",{class:"kop"}, el("div",{class:"logo"},"♻️"), el("h1",{},"CE Quiz"),
       el("div",{class:"rechts"}, el("span",{class:"pil",title:"Dagen op rij"}, `🔥 ${streak}`))),
     install,
+    el("button",{class:"kaart schakel" + (alleenEL() ? " aan" : ""),onclick:() => { P.alleenEL = !alleenEL(); bewaar(); render(schermHome); }},
+      el("span",{class:"knopje"}),
+      el("span",{}, el("b",{},"Alleen stof uit de e-learnings"), el("br"),
+        el("small",{class:"zacht"}, alleenEL() ? `${Q.filter(q => q.b.el).length} vragen uit de e-learnings Duurzaamheid en Business Ethics` : `Alle ${Q.length} vragen, inclusief aanvullende stof`))),
     el("div",{class:"kaart"},
       el("div",{class:"niveau"},
         el("div",{class:"niveau-cirkel",style:`--p:${pNiv}`}, el("span",{},niv)),
@@ -415,10 +429,10 @@ function schermHome(){
         el("span",{class:"ico"},"⚡"), el("span",{}, el("b",{},"Snelle ronde"), el("br"), el("small",{},"10 vragen · nieuwe vragen eerst"))),
       el("button",{class:"tegel",onclick:() => render(schermUitdagingInfo)}, el("span",{class:"ico"},"🏆"), el("b",{},"Uitdaging"), el("small",{},"5 rondes met punten en inzet")),
       el("button",{class:"tegel",onclick:() => render(schermOnderwerpen)}, el("span",{class:"ico"},"📚"), el("b",{},"Per onderwerp"), el("small",{},`${D.categorieen.length} onderwerpen`)),
-      el("button",{class:"tegel",disabled:!P.fouten.length,onclick:() => startSessie("fouten")}, el("span",{class:"ico"},"🔁"), el("b",{},"Fouten herhalen"), el("small",{}, P.fouten.length ? `${P.fouten.length} vragen om te herhalen` : "nog geen fouten")),
+      el("button",{class:"tegel",disabled:!foutenLijst().length,onclick:() => startSessie("fouten")}, el("span",{class:"ico"},"🔁"), el("b",{},"Fouten herhalen"), el("small",{}, foutenLijst().length ? `${foutenLijst().length} vragen om te herhalen` : "nog geen fouten")),
       el("button",{class:"tegel",onclick:() => startSessie("examen")}, el("span",{class:"ico"},"🎓"), el("b",{},"Oefenexamen"), el("small",{},"40 vragen · uitleg pas aan het eind"))),
     el("p",{class:"zacht klein",style:"text-align:center;margin-top:8px"},
-      `${Q.length} vragen over systeemdenken, circulariteit, rapportage en business ethics. Je voortgang staat alleen op dit apparaat.`),
+      `Bij elke vraag staat de bron: de les in de e-learning, of de literatuur bij aanvullende stof. Je voortgang staat alleen op dit apparaat.`),
     el("button",{class:"zacht klein",style:"text-decoration:underline;margin:0 auto",onclick:() => {
       if (confirm("Alle voortgang (XP, statistieken en fouten) wissen?")){ localStorage.removeItem(OPSLAG); P = laad(); render(schermHome); }
     }},"Voortgang wissen")
@@ -428,7 +442,7 @@ function schermHome(){
 function schermOnderwerpen(){
   return el("div",{class:"scherm stack"},
     el("div",{class:"kop"}, el("button",{class:"icoonknop",onclick:() => render(schermHome),"aria-label":"Terug"},"←"), el("h1",{},"Per onderwerp")),
-    D.categorieen.map(cat => {
+    D.categorieen.filter(cat => pool(q => q.cat === cat).length).map(cat => {
       const lijst = pool(q => q.cat === cat), st = statistiek(lijst);
       return el("button",{class:"kaart onderwerp",onclick:() => startSessie("onderwerp",{cat})},
         el("div",{class:"r"}, el("b",{},cat), el("span",{class:"zacht klein"}, `${st.gezien}/${st.totaal}`)),
@@ -487,6 +501,7 @@ function schermVraag(){
 
   if (q.s) scherm.append(el("p",{class:"stam"}, q.s));
   scherm.append(el("div",{class:"vraag"}, q.v));
+  scherm.append(el("div",{class:"bron" + (q.b.el ? "" : " extra")}, (q.b.el ? "📖 " : "➕ ") + q.b.t));
   if (r && r.inzet) scherm.append(el("div",{class:"zacht klein"}, `Inzet: ${a.inzet} punten`));
 
   if (q.t === "mc") scherm.append(viewMC(st));
@@ -613,7 +628,8 @@ function schermResultaat(){
     fout.map(q => el("details",{class:"fout-item"},
       el("summary",{}, q.s && q.t === "mc" && q.id.startsWith("d-") ? q.v.slice(0, 110) + "…" : q.v.length > 140 ? q.v.slice(0,140) + "…" : q.v),
       el("p",{}, el("span",{class:"goedtxt"},"Juist: "), juisteAntwoord(q)),
-      el("p",{class:"zacht"}, q.u.goed))),
+      el("p",{class:"zacht"}, q.u.goed),
+      el("p",{class:"bron" + (q.b.el ? "" : " extra")}, (q.b.el ? "📖 " : "➕ ") + q.b.t))),
     el("div",{class:"onder knoppen"},
       el("button",{class:"knop",onclick:() => startSessie(S.modus, S.opt)}, "Nog een keer"),
       el("button",{class:"knop tweede",onclick:() => { S = null; render(schermHome); }}, "Naar start"))

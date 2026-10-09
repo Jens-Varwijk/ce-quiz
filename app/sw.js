@@ -1,5 +1,5 @@
 /* Service worker: app werkt offline. Verhoog VERSIE bij elke publicatie. */
-const VERSIE = "ceq-3";
+const VERSIE = "ceq-4";
 const BESTANDEN = ["./", "index.html", "vragen.js", "manifest.webmanifest",
   "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png", "icons/apple-touch-icon.png"];
 
